@@ -1,6 +1,6 @@
 import express from 'express'
 import mongoose from 'mongoose'
-import 'dotenv/config'
+import { dbURI, port } from './config/environment.js'
 import router from './config/router.js'
 //Set up express stuff
 const app = express()
@@ -8,7 +8,7 @@ const app = express()
 const startServer = async () => {
 
   try {
-    await mongoose.connect(process.env.dbURI)
+    await mongoose.connect(dbURI)
     console.log('🤝 Database connection established! 🤝')
 
     //Middleware
@@ -28,7 +28,7 @@ const startServer = async () => {
       return res.status(404).json({ message: 'Path not found' })
     })
 
-    const server = app.listen(process.env.PORT, () => console.log(`🚀 Server is up and running on port: ${process.env.PORT}`))
+    const server = app.listen(port, () => console.log(`🚀 Server is up and running on port: ${port}`))
     server.timeout = 10000
 
 

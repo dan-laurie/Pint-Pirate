@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import 'dotenv/config'
+import { dbURI } from '../config/environment.js'
 
 //Models
 import City from '../models/cities.js'
@@ -11,7 +11,7 @@ const seedDatabase = async () => {
 
   try {
     // Connect to mongodb
-    await mongoose.connect(process.env.dbURI)
+    await mongoose.connect(dbURI)
     console.log('🤝 Database connected!🤝')
     // Drop current database
     await mongoose.connection.db.dropDatabase()
