@@ -10,7 +10,7 @@ const citySchema = new mongoose.Schema({
     price: { type: Number, required: true },
     abv: { type: Number, required: true },
     image: { type: String, required: true },
-    bio: { type: String, required: true, maxlength: 200 },
+    bio: { type: String, required: true, maxlength: 300 },
     locations: []
   }
 })
