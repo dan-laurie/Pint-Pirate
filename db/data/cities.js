@@ -558,4 +558,5 @@ export default [
       locations: ['Seven Red Roses', 'Bull & Chequers', ' The Water Tower']
     }
   }
+
 ]
