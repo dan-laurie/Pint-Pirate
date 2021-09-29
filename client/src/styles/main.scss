@@ -1,0 +1,49 @@
+.site-wrapper {
+  height: calc(100vh - 56px);
+}
+
+.navbar {
+  background-color: rgb(193, 129, 11);
+  .fa-beer {
+    color: white;
+    // transition: 0.4s ease-in-out;
+  }
+  .nav-item {
+    a {
+      text-decoration: none;
+      color: white;
+      margin-right: 10px;
+    }
+  }
+}
+
+h1 {
+  color: white;
+}
+p {
+  color: white;
+}
+
+// .title-screen {
+//   // margin-top: 250px;
+// }
+
+.explore-btn {
+  span {
+    color: white;
+  }
+}
+.home-background {
+  background-image: 
+  // linear-gradient(
+  //     to right,
+  //     rgba(0, 0, 0, 0.52),
+  //     rgba(0, 0, 0, 1)
+  //   ),
+    url("../assets/beer2.jpeg");
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: inherit;
+}
