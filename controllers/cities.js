@@ -56,3 +56,36 @@ export const deleteCity = async (req, res) => {
     
   }
 }
+
+//POST 
+export const postReview = async (req, res) => {
+  const { id } = req.params
+  try {
+    const city = await City.findById(id)
+    if (!city) throw new Error()
+    const newReview = { ...req.body, owner: req.currentUser._id }
+    city.review.push(newReview)
+    await city.save()
+    return res.status(200).json(city)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: 'Review Not Added' })
+  }
+}
+
+export const deleteReview = async (req, res) => {
+  const { id, reviewId } = req.params
+  try {
+    const city = await City.findById(id)
+    if (!city) throw new Error()
+    const reviewToDelete = await city.review.id(reviewId)
+    if (!reviewToDelete) throw new Error('Review Not Found')
+    if (!reviewToDelete.owner.equals(req.currentUser._id) && !city.owner.equals(req.currentUser._id)) throw new Error('Unauthorised')
+    await reviewToDelete.remove()
+    await city.save()
+    return res.sendStatus(204)
+  } catch (err) {
+    console.log(err)
+    return res.status(404).json({ message: 'Review Not Deleted' })
+  }
+}

@@ -1,5 +1,5 @@
 import express from 'express'
-import { getAllCities, createCity, getSingleCity, updateCity, deleteCity } from '../controllers/cities.js'
+import { getAllCities, createCity, getSingleCity, updateCity, deleteCity, postReview, deleteReview } from '../controllers/cities.js'
 import { loginUser, registerUser } from '../controllers/auth.js'
 import { secureRoute } from './secureRoute.js'
 
@@ -19,5 +19,11 @@ router.route('/register')
 
 router.route('/login')
   .post(loginUser)
+
+router.route('/cities/:id/reviews')
+  .post(secureRoute, postReview)
+
+router.route('/cities/:id/reviews/:reviewId')
+  .delete(secureRoute, deleteReview)
 
 export default router
