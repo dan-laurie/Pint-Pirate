@@ -5,16 +5,14 @@ import Navbar from './component/Navbar'
 function App() {
 
   return (
-    <div className="site-wrapper">
-      <BrowserRouter>
-        <Navbar />
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-        </Switch>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   )
 }
 
