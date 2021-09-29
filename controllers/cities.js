@@ -9,7 +9,8 @@ export const getAllCities = async (_req, res) => {
 //CREATE CITY
 export const createCity = async (req, res) => {
   try {
-    const cityToAdd = await City.create(req.body)
+    const cityWithOwner = { ...req.body, owner: req.currentUser._id }
+    const cityToAdd = await City.create(cityWithOwner)
     return res.status(201).json(cityToAdd)
   } catch (err){
     return res.status(422).json({ message: 'Unable to add city ', errors: err })
@@ -32,6 +33,8 @@ export const updateCity = async (req, res) => {
   const { id } = req.params
   try {
     const cityToUpdate = await City.findById(id)
+    if (!cityToUpdate) throw new Error('City not found')
+    if (!cityToUpdate.owner.equals(req.currentUser._id)) throw new Error('unauthorised')
     await cityToUpdate.update(req.body)
     return res.status(202).json({ message: '✅ Successfully Updated' })
   } catch (err) {
@@ -44,6 +47,8 @@ export const deleteCity = async (req, res) => {
   const { id } = req.params
   try {
     const cityToDelete = await City.findById(id)
+    if (!cityToDelete) throw new Error('City not found')
+    if (!cityToDelete.owner.equals(req.currentUser._id)) throw new Error('unauthorised')
     await cityToDelete.remove(cityToDelete)
     return res.status(202).json({ message: '🚮 Deleted Successfully' })
   } catch (err) {

@@ -3,9 +3,11 @@ import { dbURI } from '../config/environment.js'
 
 //Models
 import City from '../models/cities.js'
+import User from '../models/users.js'
 
 //Data
 import cityData from './data/cities.js'
+import userData from './data/users.js'
 
 const seedDatabase = async () => {
 
@@ -17,16 +19,15 @@ const seedDatabase = async () => {
     await mongoose.connection.db.dropDatabase()
     console.log('❌ Dropped database ❌')
     // // create default users
-    // const users = await User.create(userData)
-    // console.log(`✅  ${users.length} users created`)
-    // create a new teams array with owners populated
-    // const teamsWithOwners = teamData.map(team => {
-    //   team.owner = users[0]._id
-    //   return team
-    // })
+    const users = await User.create(userData)
+    console.log(`✅  ${users.length} users created`)
+    const citiesWithOwners = cityData.map(c => {
+      c.owner = users[0]._id
+      return c
+    })
 
     // Create Cities
-    const cities = await City.create(cityData)
+    const cities = await City.create(citiesWithOwners)
     console.log(`🌱 Database seeded with ${cities.length} cities 🌱`)
     // Close connection to mongodb
     await mongoose.connection.close()
