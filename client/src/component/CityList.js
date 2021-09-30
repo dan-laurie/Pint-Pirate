@@ -16,9 +16,11 @@ const CityList = () => {
       } catch (error) {
         setHasErrors(true)
       }
-      getCities()
     }
+    getCities()
   }, [])
+
+  useEffect(()=> console.log(cities), [cities])
 
   return (
     <>
