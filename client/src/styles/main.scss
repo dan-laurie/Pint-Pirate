@@ -29,14 +29,19 @@ p {
 .title-screen {
   position: relative;
   top: calc(40% - 56px);
+  margin-top: 90px;
   h1 {
     font-size: 100px;
+    margin-bottom: 30px;
   }
   p,
   .explore-btn {
     font-size: 40px;
     padding: 10px 50px;
     border-radius: 50px;
+  }
+  p {
+    margin-bottom: 80px;
   }
 }
 
@@ -107,3 +112,83 @@ p {
   text-decoration: none;
 }
 
+.home-cards {
+  margin-top: 120px;
+  // justify-content: space-around;
+  justify-content: center;
+  a {
+    text-decoration: none;
+  }
+}
+
+.untappd-card {
+  background-image: url("../assets/untapped.png");
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+  background-blend-mode: multiply;
+  height: 300px;
+  width: 300px;
+  margin: 0 15px;
+  border-radius: 10px;
+  display: flex;
+  p {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.hawk-card {
+  background-image: url("../assets/beerhawk.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+  background-blend-mode: multiply;
+  height: 300px;
+  width: 300px;
+  margin: 0 15px;
+  border-radius: 10px;
+  display: flex;
+  p {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.purity-card {
+  background-image: url("../assets/purity-brewing-company.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-color: grey;
+  background-blend-mode: multiply;
+  height: 300px;
+  width: 300px;
+  margin: 0 15px;
+  border-radius: 10px;
+  display: flex;
+  p {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
