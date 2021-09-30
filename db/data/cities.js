@@ -106,7 +106,7 @@ export default [
   {
     name: 'Manchester',
     bio: 'Situated in the North-West of England, Manchester is one of the UKs most dynamic and vibrant citys. With lots to experience from endless museums to endless pubs - youre sure to find something that peaks your interest!',
-    image: 'https://imgur.com/a/1rDD2AO.jpg',
+    image: 'https://i.imgur.com/DzoCMzu.jpg',
     pint: {
       name: 'Hydes Bitter',
       price: 2.00,
