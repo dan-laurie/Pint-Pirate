@@ -11,7 +11,8 @@ const CityList = () => {
   useEffect(() => {
     const getCities = async () => {
       try {
-        const { data } = await axios.get('/cities')
+        const { data } = await axios.get('/api/cities')
+        console.log(data)
         setCities(data)
       } catch (error) {
         setHasErrors(true)
