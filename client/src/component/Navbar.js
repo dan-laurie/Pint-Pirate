@@ -13,10 +13,10 @@ const Navbar = () => {
           {/* Nav Bar */}
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/cheeses">Login</Link>
+              <Link to="/login">Login</Link>
             </li>
             <li className="nav-item">
-              <Link to="/cheeses/new">Register</Link>
+              <Link to="/register">Register</Link>
             </li>
             {/* <li className="nav-item">
               <span onClick={handleLogout}>Logout</span>
