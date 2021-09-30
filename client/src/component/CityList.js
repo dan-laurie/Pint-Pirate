@@ -11,7 +11,8 @@ const CityList = () => {
   useEffect(() => {
     const getCities = async () => {
       try {
-        const { data } = await axios.get('/cities')
+        const { data } = await axios('/api/cities')
+        console.log(data)
         setCities(data)
       } catch (error) {
         setHasErrors(true)
@@ -23,20 +24,34 @@ const CityList = () => {
   useEffect(()=> console.log(cities), [cities])
 
   return (
-    <>
-      {cities.map(city => {
-        return (
+    <div className="beer-page">
+      <h2>City List</h2>
+      <div className="row mt-1">
+        {cities ?
+
+          cities.map(city => {
+            return (
+              <>
+                <div className="cities col-lg-3 mb-4 col-md-6">
+                  <Link className="card-link" to={`/api/cities/${city.id}`}>
+                    <div key={city.name} className='card'>
+                    
+                      <h4 className="city-name"value={city.name}>{city.name}</h4>
+                      <img className="city-image" src={city.image}></img>
+                    
+                    </div>
+                  </Link>
+                </div>
+              </>
+            )
+          })
+          :
           <>
-            <div key={city._id} className='city-card'>
-              <Link key={city._id} to={`/cities/${city.id}`}>
-                <p value={city.name}>{city.name}</p>
-                <img src={city.image}>{city.image}</img>
-              </Link>
-            </div>
+            <h1>Sorry, Cannot display</h1>
           </>
-        )
-      })}
-    </>
+        }
+      </div>
+    </div>
   )
 
 }

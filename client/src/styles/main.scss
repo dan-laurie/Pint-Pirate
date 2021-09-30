@@ -19,6 +19,9 @@
 h1 {
   color: white;
 }
+h2 {
+  color: white;
+}
 p {
   color: white;
 }
@@ -56,4 +59,41 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: inherit;
+}
+
+.beer-page {
+  height: calc(100vh - 56px);
+  background-image: url("../assets/beer2.jpeg");
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: inherit;
+}
+
+.city-name {
+  color: white;
+  text-align: center;
+  padding-top: 5px;
+  // padding-bottom: 5px;
+}
+
+.city-image {
+  height: 200px;
+}
+
+.row {
+  margin: 0 auto;
+}
+
+.card {
+  background-color: rgb(193, 129, 11);
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card-link {
+  text-decoration: none;
 }
