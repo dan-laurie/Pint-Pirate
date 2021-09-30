@@ -26,28 +26,31 @@ p {
 .title-screen {
   position: relative;
   top: calc(40% - 56px);
-  h1{
+  h1 {
     font-size: 100px;
   }
-  p, .explore-btn{
-    font-size: 50px;
+  p,
+  .explore-btn {
+    font-size: 40px;
+    padding: 10px 50px;
+    border-radius: 50px;
   }
 }
 
 .explore-btn {
   background-color: rgb(193, 129, 11);
-  &:hover{
-    transform: scale(1.2);
-    transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
   }
   span {
     color: white;
+    margin-right: 10px;
   }
 }
 .home-background {
   height: calc(100vh - 56px);
-  background-image: 
-    url("../assets/beer2.jpeg");
+  background-image: url("../assets/beer2.jpeg");
   background-color: grey;
   background-blend-mode: multiply;
   background-repeat: no-repeat;
