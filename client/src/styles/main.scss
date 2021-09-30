@@ -132,12 +132,16 @@ p {
   margin: 0 15px;
   border-radius: 10px;
   display: flex;
+  // border: 5px solid rgb(193, 129, 11);
+  box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
   p {
     font-size: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
   }
   transition: 0.4s ease-in-out;
   &:hover {
@@ -156,12 +160,16 @@ p {
   margin: 0 15px;
   border-radius: 10px;
   display: flex;
+  // border: 5px solid rgb(193, 129, 11);
+  box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
   p {
     font-size: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
   }
   transition: 0.4s ease-in-out;
   &:hover {
@@ -180,12 +188,16 @@ p {
   margin: 0 15px;
   border-radius: 10px;
   display: flex;
+  // border: 5px solid rgb(193, 129, 11);
+  box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
   p {
     font-size: 20px;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
   }
   transition: 0.4s ease-in-out;
   &:hover {

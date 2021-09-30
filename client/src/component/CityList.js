@@ -13,7 +13,6 @@ const CityList = () => {
       try {
         const { data } = await axios('/api/cities')
         setCities(data)
-        // console.log(data)
       } catch (error) {
         setHasErrors(true)
       }
@@ -37,7 +36,7 @@ const CityList = () => {
       console.log('hl',sortedCities)
     } else if (e.target.value === 'all') {
       setSortedCities(cities)
-      console.log('all',sortedCities)
+      console.log('all', cities)
     }
     return
   }
@@ -53,7 +52,7 @@ const CityList = () => {
         </select>
       </div>
       <div className="row mt-1">
-        {sortedCities.map(city => {
+        {(cities ? cities : (sortedCities.length > 0 ? sortedCities : cities)).map(city => {
           return (
             <div className="cities col-lg-3 mb-4 col-md-6" key={city.id}>
               <Link className="card-link" to={`/api/cities/${city.id}`}>
@@ -66,10 +65,6 @@ const CityList = () => {
             </div>
           )
         })}
-          :
-        <>
-          <h1>Sorry, Cannot display</h1>
-        </>
       </div>
     </div>
   )
