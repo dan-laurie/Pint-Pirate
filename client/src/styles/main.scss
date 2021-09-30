@@ -69,6 +69,10 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   height: inherit;
+  h2 {
+    text-align: center;
+    padding: 15px 0;
+  }
 }
 
 .city-name {
@@ -92,8 +96,14 @@ p {
   &:hover {
     transform: scale(1.05);
   }
+  h6 {
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+  }
 }
 
 .card-link {
   text-decoration: none;
 }
+

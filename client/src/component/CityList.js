@@ -7,13 +7,15 @@ const CityList = () => {
   const [ cities, setCities ] = useState([])
   const [ hasErrors, setHasErrors] = useState(false)
 
+  const [prices, setPrices] = useState([])
+
 
   useEffect(() => {
     const getCities = async () => {
       try {
         const { data } = await axios('/api/cities')
-        console.log(data)
         setCities(data)
+        console.log(data.pint)
       } catch (error) {
         setHasErrors(true)
       }
@@ -24,9 +26,14 @@ const CityList = () => {
   return (
     <div className="beer-page">
       <h2>City List</h2>
+      <div className="beer-filter">
+        <select name="options" id="">
+          <option value="all">All</option>
+          <option value="low-high">Low-High</option>
+        </select>
+      </div>
       <div className="row mt-1">
         {cities ?
-
           cities.map(city => {
             return (
               <>
@@ -36,6 +43,7 @@ const CityList = () => {
                     
                       <h4 className="city-name"value={city.name}>{city.name}</h4>
                       <img className="city-image" src={city.image}></img>
+                      <h6>£{(city.pint.price).toFixed(2)}</h6>
                     
                     </div>
                   </Link>
