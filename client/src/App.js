@@ -13,7 +13,7 @@ function App() {
           <Home />
         </Route>
         <Route exact path='/beers'>
-          <CityList CityList={CityList}/>
+          <CityList />
         </Route>
       </Switch>
     </BrowserRouter>
