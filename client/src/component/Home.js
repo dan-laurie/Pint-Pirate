@@ -5,10 +5,29 @@ const Home = () => {
   return ( 
     <div className="site-wrapper">
       <div className="home-background">
-        <div className="container title-screen d-flex flex-column align-items-center">
-          <h1>Pint-Pirate</h1>
-          <p>Find UK travel destinations based off the price of a pint! 🍺 </p>
-          <Link className="btn explore-btn" to="/beers"><span>Explore </span>   🧭 </Link>
+        <div className="home-container d-flex flex-column">
+          <div className="container title-screen d-flex flex-column align-items-center">
+            <h1>Pint-Pirate</h1>
+            <p>Find UK travel destinations based off the price of a pint! 🍺 </p>
+            <Link className="btn explore-btn" to="/beers"><span>Explore </span>   🧭 </Link>
+          </div>
+          <div className="home-cards d-flex">
+            <a href='https://untappd.com/' rel="noreferrer" target="_blank">
+              <div className="untappd-card">
+                <p>Go to Untappd for further Beer ratings and find like minded drinkers!</p>
+              </div>
+            </a>
+            <a href="https://www.beerhawk.co.uk/"rel="noreferrer" target="_blank">
+              <div className="hawk-card">
+                <p>Fancy a draught at home? Check out Beer Hawk!</p>
+              </div>
+            </a>
+            <a href="https://puritybrewing.com/"rel="noreferrer" target="_blank">
+              <div className="purity-card">
+                <p>For completely carbon-neutral brewing, check out Purity Brewing Co.</p>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
