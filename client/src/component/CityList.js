@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 const CityList = () => {
 
   const [ cities, setCities ] = useState([])
+  const [ filteredCities, setFilteredCities ] = useState([])
+  const [ filters, setFilters ] = useState({ name: '', searchTerm: '' })
   const [ hasErrors, setHasErrors] = useState(false)
 
   const [prices, setPrices] = useState([])
@@ -22,6 +24,13 @@ const CityList = () => {
     }
     getCities()
   }, [])
+
+  useEffect(() => {
+    const regexSearch = new RegExp(filters.searchTerm, 'i')
+    setFilteredCities(cities.filter(city => {
+      return regexSearch.test(city.name)
+    }))
+  })
 
   return (
     <div className="beer-page">
