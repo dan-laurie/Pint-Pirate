@@ -7,14 +7,18 @@
     text-align: center;
     padding: 15px 0;
     color: $whitecolor;
+    font-size: 50px;
   }
 }
-
+.beer-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 .city-name {
   color: white;
   text-align: center;
   padding-top: 5px;
-  // padding-bottom: 5px;
 }
 
 .city-image {
@@ -48,6 +52,11 @@
   padding: 2px 6px 2px 6px;
   display: inline-block;
   border-radius: 6px;
+  background-color: rgb(193, 129, 11);
+  border: none;
+}
+::placeholder {
+  color: white;
 }
 
 .sort {
@@ -55,4 +64,7 @@
   padding: 5px 8px 5px 8px;
   display: inline-block;
   border-radius: 6px;
+  background-color: rgb(193, 129, 11);
+  border: none;
+  color: white;
 }
