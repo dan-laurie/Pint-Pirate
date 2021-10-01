@@ -5,13 +5,10 @@ import { Link } from 'react-router-dom'
 
 const CityList = () => {
   const [ cities, setCities ] = useState([])
-<<<<<<< HEAD
-  const [ filteredCities, setFilteredCities ] = useState([])
-  const [ filters, setFilters ] = useState({ name: '', searchTerm: '' })
-=======
   const [sortedCities, setSortedCities] = useState([])
->>>>>>> c67fceaa10f1811742adba8e6a0d19fa5fec88da
   const [ hasErrors, setHasErrors] = useState(false)
+  const [ filters, setFilters ] = useState({ searchTerm: '' })
+  const [ filteredCities, setFilteredCities ] = useState([])
 
   const [prices, setPrices] = useState([])
 
@@ -29,14 +26,6 @@ const CityList = () => {
     getCities()
   }, [])
 
-<<<<<<< HEAD
-  useEffect(() => {
-    const regexSearch = new RegExp(filters.searchTerm, 'i')
-    setFilteredCities(cities.filter(city => {
-      return regexSearch.test(city.name)
-    }))
-  })
-=======
   const handleOptions = (e) => {
     if (e.target.value === 'lh'){
       const lowCities = cities.sort((a, b) => {
@@ -56,34 +45,46 @@ const CityList = () => {
     }
     return
   }
->>>>>>> c67fceaa10f1811742adba8e6a0d19fa5fec88da
+
+  useEffect(() => {
+    const regexSearch = new RegExp(filters.searchTerm, 'i')
+    setFilteredCities(cities.filter(city => {
+      return regexSearch.test(city.name)
+    }))
+  }, [filters, cities])
+
+  const handleFilterChange = (event) => {
+    const newObj = { ...filters, [event.target.name]: event.target.value }
+    console.log('New Obj', newObj)
+    setFilters(newObj)
+  }
 
   return (
     <div className="beer-page">
       <h2>City List</h2>
       <div className="beer-filter">
-        <select name="options" onChange={handleOptions}>
+        <input onChange={handleFilterChange} name="searchTerm" value={filters.searchTerm} placeholder='Search City 🔎' className='filter-type'/>
+        <select name="options" onChange={handleOptions} className='sort'>
           <option value="all" defaultValue>All</option>
           <option value="lh">Low to High</option>
           <option value="hl">High to Low</option>
         </select>
       </div>
+      
       <div className="row mt-1">
-        {(cities ? cities : sortedCities).map(city => {
+        {(filteredCities ? filteredCities : cities).map(city => {
           return (
-            <>
-              <div className="cities col-lg-3 mb-4 col-md-6">
-                <Link className="card-link" to={`/api/cities/${city.id}`}>
-                  <div key={city.name} className='card'>
-                    
-                    <h4 className="city-name"value={city.name}>{city.name}</h4>
-                    <img className="city-image" src={city.image}></img>
-                    <h6>£{(city.pint.price).toFixed(2)}</h6>
-                    
-                  </div>
-                </Link>
-              </div>
-            </>
+            <div key={city.name} className="cities col-lg-3 mb-4 col-md-6">
+              <Link className="card-link" to={`/api/cities/${city.id}`}>
+                <div className='card'>
+                  
+                  <h4 className="city-name"value={city.name}>{city.name}</h4>
+                  <img className="city-image" src={city.image}></img>
+                  <h6>£{(city.pint.price).toFixed(2)}</h6>
+                  
+                </div>
+              </Link>
+            </div>
           )
         })}
           :
