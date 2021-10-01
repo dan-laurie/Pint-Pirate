@@ -1,0 +1,33 @@
+.container-city{
+  margin-top: 70px;
+  .city-info{
+    max-height: fit-content;
+  }
+}
+.beers-side{
+  margin-top: 140px;
+}
+
+.city-pic {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+.city-bio {
+  p{
+    max-width: 500px;
+  }
+}
+
+.beer-pic {
+  img{
+    width: 500px;
+  }
+}
+
+.beer-info{
+  p{
+    max-width: 500px;
+  }
+}
+

@@ -5,6 +5,8 @@ import Navbar from './component/Navbar'
 import CityList from './component/CityList'
 import Login from './component/auth/login'
 import Register from './component/auth/register'
+import CityCard from './component/CityCard'
+
 function App() {
 
   return (
@@ -23,6 +25,10 @@ function App() {
         <Route exact path='/register'>
           <Register />
         </Route>
+        <Route exact path='/beers/:id'>
+          <CityCard />
+        </Route>
+        
       </Switch>
     </BrowserRouter>
   )
