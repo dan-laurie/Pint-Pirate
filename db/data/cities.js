@@ -41,7 +41,7 @@ export default [
   {
     name: 'Bath',
     bio: 'Built for pleasure and relaxation, beautiful Bath has been a wellbeing destination since Roman times.  Bath’s compact, visitor-friendly centre is overflowing with places to eat and drink, plus some of the finest independent shops in Britain, making it the ideal city break. Immerse yourself in Bath’s remarkable collection of museums and galleries, and enjoy year-round festivals, theatre, music and sports.',
-    image: 'https://i.imgur.com/ui8qzvI.jpg',
+    image: 'https://i.imgur.com/RQXwLeE.jpg',
     pint: {
       name: 'Carling',
       price: 3.10,
