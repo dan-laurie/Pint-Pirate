@@ -65,7 +65,7 @@ const CityList = () => {
         </select>
       </div>
       <div className="row mt-1">
-        {(filteredCities.length > 0 ? filteredCities : cities || sortedCities.length > 0 ? sortedCities : cities).map(city => {
+        {(filteredCities.length > 0 ? filteredCities : (sortedCities.length > 0 ? sortedCities : cities)).map(city => {
           return (
             <div className="cities col-lg-3 mb-4 col-md-6" key={city.id}>
               <Link className="card-link" to={`/api/cities/${city.id}`}>
