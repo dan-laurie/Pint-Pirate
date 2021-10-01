@@ -1,5 +1,5 @@
 .beer-page {
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
   background-image: url("../../assets/beer2.jpeg");
   @extend %backgroundedits;
   height: inherit;
