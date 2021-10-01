@@ -1,33 +1,47 @@
-.container-city{
-  margin-top: 70px;
-  .city-info{
-    max-height: fit-content;
+.container-city {
+  position: relative;
+  top: 40px;
+  color: $whitecolor;
+}
+
+.city-pic{
+  width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
+}
+
+.beer-pic-image{
+  width: 400px;
+  box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
+  border-radius: 10px;
+}
+.city-info{
+  display: flex;
+  justify-content: center;
+  .city-bio {
+    p{
+      max-width: 40vw;
+      font-size: 30px;
+    }
   }
 }
-.beers-side{
-  margin-top: 140px;
-}
 
-.city-pic {
-  max-width: 500px;
-  max-height: 500px;
-}
-
-.city-bio {
+.beers-side {
+  margin: 80px auto 0;
+  align-items: center;
   p{
-    max-width: 500px;
+    max-width: 40vw;
+  }
+  .beer-info{
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    p{
+      font-size: 30px;
+    }
+    h2{
+      text-align: left;
+    }
   }
 }
-
-.beer-pic {
-  img{
-    width: 500px;
-  }
-}
-
-.beer-info{
-  p{
-    max-width: 500px;
-  }
-}
-
