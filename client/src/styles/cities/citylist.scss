@@ -52,8 +52,9 @@
   padding: 2px 6px 2px 6px;
   display: inline-block;
   border-radius: 6px;
-  background-color: rgb(193, 129, 11);
-  border: none;
+  background-color: rgba(193, 129, 11, 0);
+  border: 1px solid rgba(193, 129, 11);
+  color: white;
 }
 ::placeholder {
   color: white;
@@ -64,7 +65,7 @@
   padding: 5px 8px 5px 8px;
   display: inline-block;
   border-radius: 6px;
-  background-color: rgb(193, 129, 11);
-  border: none;
+  background-color: rgba(193, 129, 11, 0);
+  border: 1px solid rgba(193, 129, 11);
   color: white;
 }
