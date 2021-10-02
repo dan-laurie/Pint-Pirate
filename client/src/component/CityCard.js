@@ -48,6 +48,14 @@ const CityCard = () => {
                 })}
               </ul>
             </div>
+            <div className='card-buttons'>
+              <Link to={`/beers/${city.id}/reviews`}>
+                <h4 className='review-link'>Post a review!</h4>
+              </Link>
+              <Link to={'/beers'}>
+                <h4 className='list-link'>Back to list</h4>
+              </Link>
+            </div>
           </div>
         </div>
         </>

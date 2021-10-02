@@ -47,3 +47,43 @@
     }
   }
 }
+
+a {
+  text-decoration: none;
+}
+
+.review-link {
+  color: white;
+  margin-top: 500px;
+  padding: 5px 8px 5px 8px;
+  display: inline-block;
+  border-radius: 6px;
+  background-color: rgba(193, 129, 11, 0.6);
+  border: 1px solid rgba(193, 129, 11);
+  transition: 0.4s ease-in-out;
+  border-radius: 50px;
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(193, 129, 11, 0);
+  }
+}
+
+.list-link {
+  color: white;
+  margin-top: 500px;
+  padding: 5px 8px 5px 8px;
+  display: inline-block;
+  border-radius: 6px;
+  background-color: rgba(193, 129, 11, 0.6);
+  border: 1px solid rgba(193, 129, 11);
+  transition: 0.4s ease-in-out;
+  border-radius: 50px;
+  &:hover {
+    transform: scale(1.05);
+    background-color: rgba(193, 129, 11, 0);
+  }
+}
+
+.test {
+  color: black;
+}

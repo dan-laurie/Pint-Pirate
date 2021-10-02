@@ -1,3 +1,4 @@
+
 .register-page,
 .login-page {
   height: calc(100vh - 56px);
@@ -60,4 +61,53 @@
       }
     }
   }
+}
+form {
+  display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin: 100px 0 auto; */
+    margin-top: 200px;
+}
+
+body {
+  height: calc(100vh - 56px);
+  background-image: url("../../assets/beer2.jpeg");
+  background-color: grey;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: inherit;
+}
+
+button {
+  color: white;
+  padding: 5px 8px 5px 8px;
+  border-radius: 6px;
+  border: none;
+  margin: 0 auto;
+  width: 25vh;
+  transition: 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.form-field {
+  text-align: center;
+}
+
+.textarea {
+  width: 70vh;
+  height: 20vh;
+  border: none;
+  border-radius: 10px;
+}
+
+select {
+  border-radius: 10px;
+    width: 10vh;
+    text-align: center;
+    border: none;
 }
