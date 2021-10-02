@@ -8,6 +8,7 @@ import Register from './component/auth/register'
 import CityCard from './component/CityCard'
 import ReviewForm from './component/ReviewForm'
 import About from './component/About'
+import Footer from './component/Footer'
 
 function App() {
 
@@ -38,6 +39,7 @@ function App() {
         </Route>
         
       </Switch>
+      <Footer />
     </BrowserRouter>
   )
 }
