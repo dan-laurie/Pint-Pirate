@@ -7,6 +7,7 @@ import Login from './component/auth/login'
 import Register from './component/auth/register'
 import CityCard from './component/CityCard'
 import ReviewForm from './component/ReviewForm'
+import About from './component/About'
 
 function App() {
 
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route exact path='/register'>
           <Register />
+        </Route>
+        <Route exact path='/about'>
+          <About />
         </Route>
         <Route exact path='/beers/:id'>
           <CityCard />

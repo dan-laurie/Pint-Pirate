@@ -18,6 +18,9 @@ const Navbar = () => {
             <li className="nav-item">
               <Link to="/register">Register</Link>
             </li>
+            <li className="nav-item">
+              <Link to="/about">About</Link>
+            </li>
             {/* <li className="nav-item">
               <span onClick={handleLogout}>Logout</span>
             </li> */}
