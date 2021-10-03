@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Search from './Search'
+import { userIsAuthenticated } from './helpers/auth'
 
 const CityList = () => {
   const [ cities, setCities ] = useState([])
@@ -58,13 +59,23 @@ const CityList = () => {
         {(filteredCities.length > 0 ? filteredCities : cities).map(city => {
           return (
             <div className="cities col-lg-3 mb-4 col-md-6" key={city.id}>
-              <Link className="card-link" to={`/beers/${city.id}`}>
-                <div  className='card'> 
-                  <h4 className="city-name"value={city.name}>{city.name}</h4>
-                  <img className="city-image" src={city.image}></img>
-                  <h6>£{(city.pint.price).toFixed(2)}</h6>
-                </div>
-              </Link>
+              { userIsAuthenticated() ?
+                <Link className="card-link" to={`/beers/${city.id}`}>
+                  <div  className='card'> 
+                    <h4 className="city-name"value={city.name}>{city.name}</h4>
+                    <img className="city-image" src={city.image}></img>
+                    <h6>£{(city.pint.price).toFixed(2)}</h6>
+                  </div>
+                </Link>
+                :
+                <Link className="card-link" to={'/login'}>
+                  <div  className='card'> 
+                    <h4 className="city-name"value={city.name}>{city.name}</h4>
+                    <img className="city-image" src={city.image}></img>
+                    <h6>£{(city.pint.price).toFixed(2)}</h6>
+                  </div>
+                </Link>
+              }
             </div>
           )
         })} 

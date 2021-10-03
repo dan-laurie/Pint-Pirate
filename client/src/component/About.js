@@ -31,23 +31,20 @@ const About = () => {
             <div className="dan-info d-flex flex-column">
               <h3>Dan</h3>
               <hr />
-              <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
-              <a href="" target="_blank"><i className="fab fa-github"></i></a>
-              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/danlaurie98/" rel="noreferrer" target="_blank"><i className="fab fa-linkedin"></i></a>
+              <a href="https://github.com/dan-laurie" rel="noreferrer" target="_blank"><i className="fab fa-github"></i></a>
             </div>
             <div className="wala-info d-flex flex-column">
               <h3>Wala</h3>
               <hr />
-              <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
-              <a href="" target="_blank"><i className="fab fa-github"></i></a>
-              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/wala-zeidan-315198214/" rel="noreferrer" target="_blank"><i className="fab fa-linkedin"></i></a>
+              <a href="https://github.com/walazeidan" rel="noreferrer" target="_blank"><i className="fab fa-github"></i></a>
             </div>
             <div className="kwasi-info d-flex flex-column">
               <h3>Kwasi</h3>
               <hr />
-              <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
-              <a href="" target="_blank"><i className="fab fa-github"></i></a>
-              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/kwasi-appiah-kubi/" rel="noreferrer" target="_blank"><i className="fab fa-linkedin"></i></a>
+              <a href="https://github.com/Kwasiiii" rel="noreferrer" target="_blank"><i className="fab fa-github"></i></a>
             </div>
           </div>
         </div>    

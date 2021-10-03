@@ -4,7 +4,8 @@
     color: white;
   }
   .nav-item {
-    a {
+    a,
+    .logout {
       text-decoration: none;
       color: white;
       margin-right: 10px;
@@ -12,7 +13,7 @@
       border: 1px solid white;
       border-radius: 10px;
       transition: 0.2s ease-in-out;
-      &:hover{
+      &:hover {
         background-color: white;
         color: rgb(193, 129, 11);
         border: 1px solid rgb(193, 129, 11);
