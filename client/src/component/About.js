@@ -7,7 +7,7 @@ const About = () => {
         <div className="about-info d-flex flex-column">
           <h1>About</h1>
           <hr />
-          <p>Welcome to Pint Pirate! <br /> A project created during General Assembly&apos;s SEI by Dan, Wala, Kwasi.<br />
+          <p>Welcome to Pint Pirate! <br /> A project created during General Assembly&apos;s SEI by Dan, Wala and Kwasi.<br />
         A simple easy to use web application to find the cheapest pint in all major UK cities. <br />Feel free to add cities that are not on the database or simply share your drinking expriences at different cities!
           </p>
           <div className="tech">
@@ -27,17 +27,27 @@ const About = () => {
               <i className="devicon-npm-original-wordmark colored"></i>
             </div>
           </div>
-          <div className="contact-info">
-            <div className="dan-info">
+          <div className="contact-info d-flex justify-content-center">
+            <div className="dan-info d-flex flex-column">
               <h3>Dan</h3>
               <hr />
-              <a href=""></a>
+              <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
+              <a href="" target="_blank"><i className="fab fa-github"></i></a>
+              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
             </div>
-            <div className="wala-info">
-
+            <div className="wala-info d-flex flex-column">
+              <h3>Wala</h3>
+              <hr />
+              <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
+              <a href="" target="_blank"><i className="fab fa-github"></i></a>
+              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
             </div>
-            <div className="kwasi-info">
-
+            <div className="kwasi-info d-flex flex-column">
+              <h3>Kwasi</h3>
+              <hr />
+              <a href="" target="_blank"><i className="fab fa-linkedin"></i></a>
+              <a href="" target="_blank"><i className="fab fa-github"></i></a>
+              <a href="" target="_blank"><i className="fab fa-twitter"></i></a>
             </div>
           </div>
         </div>    
