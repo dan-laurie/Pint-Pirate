@@ -10,6 +10,7 @@ const CityCard = () => {
 
 
   const token = getTokenFromLocalStorage() 
+  // const revId = city.review._id
 
   useEffect(() => {
     const getCity = async () => {
@@ -26,10 +27,11 @@ const CityCard = () => {
   },[id])
 
   const handleDelete = async (e) => {
-    e.preventDefault()
-    console.log(e.target.value)
+    // e.preventDefault()
+    const revId = e.target
+    console.log(revId.name)
     try {
-      await axios.delete(`/cities/${id}/reviews/${e.target.value}`,{
+      await axios.delete(`/cities/${id}/reviews/${e.target.name}`,{
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -82,14 +84,14 @@ const CityCard = () => {
           <div className="review d-flex flex-column flex-wrap">
             <h2>Reviews</h2>
             <div className="div d-flex flex-wrap">
-              {city.review.map((c, i) => {
+              {city.review.map(c => {
                 return (
-                  <div className="review-post" key={i}>
+                  <div className="review-post" key={c._id}>
                     <p>Posted By: {c.owner}</p>
                     <p className="text-post">{c.text}</p>
                     <p>Rating: {c.rating}</p>
                     <p>Posted At: {c.createdAt}</p>
-                    <p><i className="fas fa-trash-alt" onClick={handleDelete} value={c._id}></i></p>
+                    <i onClick={handleDelete} className="fas fa-trash-alt" name={c._id}></i>
                   </div>
                 )
               })}
