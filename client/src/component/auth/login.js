@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import axios from 'axios' 
 import { Link, useHistory } from 'react-router-dom'
 
+
 const Login = () => {
+
+  
 
   //history
   const history = useHistory() //enables us to move pages without refresh
@@ -23,7 +26,7 @@ const Login = () => {
 
   const setTokenToLocalStorage = (token) => {
     window.localStorage.setItem('token', token) // the token is stored in Local Storage, whoop whoop!
-    history.push('/beers') //upon successful login, we are re-directed to /cheeses
+    history.push('/cities') //upon successful login, we are re-directed to /cheeses
   }
 
   const handleSubmit = async (event) => {

@@ -189,7 +189,7 @@ export default [
       name: 'Carling',
       price: 1.90,
       abv: 3.7,
-      image: 'https://i.imgur.com/XGuCrCA.png',
+      image: 'https://i.imgur.com/LXnFUQX.png',
       bio: 'Carling is brewed to have the perfect balance of sweetness and bitterness, giving it that brilliantly refreshing taste from the first sip to the last.',
       locations: ['Woodys Liverpool', 'Rubber Soul']
     }
@@ -215,7 +215,7 @@ export default [
       name: 'Carling',
       price: 2.50,
       abv: 3.7,
-      image: 'https://i.imgur.com/XGuCrCA.png',
+      image: 'https://i.imgur.com/LXnFUQX.png',
       bio: 'Carling is brewed to have the perfect balance of sweetness and bitterness, giving it that brilliantly refreshing taste from the first sip to the last.',
       locations: ['The White Star', 'Hanley Brewers Fayre']
     }
