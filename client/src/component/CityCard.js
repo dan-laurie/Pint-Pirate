@@ -6,11 +6,16 @@ import { getTokenFromLocalStorage } from './helpers/auth'
 const CityCard = () => {
   const [city, setCity] = useState(null)
   const [hasError, setHasError] = useState(false)
-  const { id, reviewId } = useParams()
+  // const [ deleteReview, setDeleteReview ] = useState([])
+  // const [ updateState, setUpdateState ] = React.useState()
+  // const forceUpdate = React.useCallback(() => setUpdateState({}), [])
+  const { id } = useParams()
 
   const history = useHistory()
   const token = getTokenFromLocalStorage() 
   // const revId = city.review._id
+
+  
 
   useEffect(() => {
     const getCity = async () => {
@@ -28,19 +33,23 @@ const CityCard = () => {
 
   const handleDelete = async (e) => {
     // e.preventDefault()
-
+    const remove = e.target.name
     try {
       await axios.delete(`/api/cities/${id}/reviews/${e.target.name}`,{
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
-      history.back()
+      window.location.reload(false)
     } catch (err) {
       console.log(err)
     }
-    
   }
+
+  // useEffect(() => {
+    
+  // }, [deleteReview])
+
 
   return (
     <div className="beer-page"> 
@@ -81,21 +90,25 @@ const CityCard = () => {
             </div>
           </div>
           <div className="review d-flex flex-column flex-wrap">
-            <h2>Reviews</h2>
-            <div className="div d-flex flex-wrap">
-              {city.review.map(c => {
-                return (
-                  <div className="review-post" key={c._id}>
-                    <p>Posted By: {c.owner}</p>
-                    <p className="text-post">{c.text}</p>
-                    <p>Rating: {c.rating}</p>
-                    <p>Posted At: {c.createdAt}</p>
-                    {/* <i onClick={handleDelete} className="fas fa-trash-alt" name={c._id}></i> */}
-                    <button onClick={handleDelete} name={c._id}>Delete</button>
-                  </div>
-                )
-              })}
-            </div>
+            {city.review.length > 0 ?
+              <><h2>Reviews</h2><div className="div d-flex flex-wrap">
+                {city.review.map(c => {
+                  return (
+                    <div className="review-post" key={c._id}>
+                      <p>Posted By: {c.owner}</p>
+                      <p className="text-post">{c.text}</p>
+                      <p>Rating: {c.rating}</p>
+                      <p>Posted At: {c.createdAt}</p>
+                      <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
+                    </div>
+                  )
+                })}
+              </div></>
+              :
+              <h2></h2>
+            }
+            
+            
           </div>
         </div>
         </>

@@ -19,9 +19,12 @@
 }
 .city-info{
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   position: relative;
     top: 56px;
+    justify-content: space-around;
+    max-width: 80vw;
+    margin: 0 auto;
   .city-bio {
     p{
       max-width: 40vw;
@@ -130,6 +133,12 @@ a {
   }
 }
 
+.delete-button {
+  width: fit-content;
+  background-color: inherit;
+  margin: 7px;
+}
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0);
@@ -147,3 +156,4 @@ a {
     transform: translate3d(2px, 0, 0);
   }
 }
+
