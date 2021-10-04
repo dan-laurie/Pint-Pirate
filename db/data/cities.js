@@ -7,7 +7,7 @@ export default [
       name: 'Doombar',
       price: 2.50,
       abv: 4.0,
-      image: 'https://i.imgur.com/6bdRvf2.jpg',
+      image: 'https://i.imgur.com/TeVAi9X.png',
       bio: 'Doom Bar is a perfectly balanced beer combining subtle yet complex flavours, Doom Bar is both satisfying and deliciously moreish.',
       locations: ['The Eastville Club', 'The Rising Sun', 'White Lion']
     }
@@ -20,7 +20,7 @@ export default [
       name: 'Fosters',
       price: 1.80,
       abv: 4.0,
-      image: 'https://i.imgur.com/KzEnChT.jpg',
+      image: 'https://i.imgur.com/b1UDTLb.png',
       bio: 'The lager is hopped with selected oil extracts of Super Pride of Ringwood hops, which like any modern beer, is added after fermentation to minimise losses to the yeast sediment.The hop is sourced from the only two farms in Australia that grow it. Known as a nighout-lager, cheap and cheerful.',
       locations: ['City Arms', 'The Great Western - JD Wetherspoon', 'The Borough']
     }
@@ -33,7 +33,7 @@ export default [
       name: 'Abbot Ale',
       price: 2.25,
       abv: 5.0,
-      image: 'https://i.imgur.com/2VXirsi.jpg',
+      image: 'https://i.imgur.com/OFxQt6X.png',
       bio: 'Abbot is an irresistible ale with masses of fruit characters, a malty richness and superb hop balance. It is brewed longer to a unique recipe, which makes it the full-flavoured, smooth and mature beer it is today.',
       locations: ['The Imperial', 'Ship Inn', 'The Old Firehouse']
     }
@@ -46,7 +46,7 @@ export default [
       name: 'Carling',
       price: 3.10,
       abv: 3.7,
-      image: 'https://i.imgur.com/hW3qtu1.jpg',
+      image: 'https://i.imgur.com/LXnFUQX.png',
       bio: 'Carling is brewed to have the perfect balance of sweetness and bitterness, giving it that brilliantly refreshing taste from the first sip to the last.',
       locations: ['Lamb & Lion', 'The King of Wessex', 'Belvoir Castle']
     }
@@ -59,7 +59,7 @@ export default [
       name: 'Carlsberg Export',
       price: 3.25,
       abv: 4.8,
-      image: 'https://i.imgur.com/QQg9A8Q.jpg',
+      image: 'https://i.imgur.com/Qy4h9DY.png',
       bio: 'Carlsberg Export is a premium-strength lager, with a refined and satisfying taste. Brewed to the original Danish recipe, it has deep malty notes and a distinct bitterness that generate a full-flavoured lager that is stronger in taste and mouth-feel than our standard Pilsner.',
       locations: ['The Criterion', 'The Super Mare', 'The George and Dragon Pub']
     }
@@ -72,7 +72,7 @@ export default [
       name: 'Carling',
       price: 3.12,
       abv: 3.7,
-      image: 'https://i.imgur.com/hW3qtu1.jpg',
+      image: 'https://i.imgur.com/LXnFUQX.png',
       bio: 'Carling is brewed to have the perfect balance of sweetness and bitterness, giving it that brilliantly refreshing taste from the first sip to the last.',
       locations: ['The Bank', 'The West Hoe', 'Dolphin Hotel']
     }
@@ -85,7 +85,7 @@ export default [
       name: 'Headlander Bitter',
       price: 2.05,
       abv: 4.2,
-      image: 'https://i.imgur.com/Gs3Rdbi.jpg',
+      image: 'https://i.imgur.com/0BFxYNV.png',
       bio: 'A hazy copper red glassful. The aroma is wholesome brown bread with a very English veg-and-metal hop tang. The two sides should blend together in the flavour but they drift further apart: a sugary-tea sweetness and quite a harsh, raw bitterness with no hop flavour nuance.',
       locations: ['Brass Haus', 'The Moon in The Square', 'George Tapps']
     }
@@ -98,7 +98,7 @@ export default [
       name: 'Fosters',
       price: 3.30,
       abv: 4.0,
-      image: 'https://i.imgur.com/KzEnChT.jpg',
+      image: 'https://i.imgur.com/b1UDTLb.png',
       bio: 'The lager is hopped with selected oil extracts of Super Pride of Ringwood hops, which like any modern beer, is added after fermentation to minimise losses to the yeast sediment.The hop is sourced from the only two farms in Australia that grow it. Known as a nighout-lager, cheap and cheerful.',
       locations: ['Mitre', 'The Bedford', 'The Frog and Frigate']
     }
