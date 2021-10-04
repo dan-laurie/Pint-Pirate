@@ -176,7 +176,7 @@ export default [
       name: 'Fosters',
       price: 2.50,
       abv: 5.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Wetherspoons']
     }
@@ -202,7 +202,7 @@ export default [
       name: 'Fosters',
       price: 1.55,
       abv: 5.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['The Ardwick']
     }
@@ -228,7 +228,7 @@ export default [
       name: 'Fosters',
       price: 2.20,
       abv: 5.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Friary Leicester', 'The High Cross']
     }
@@ -241,7 +241,7 @@ export default [
       name: 'Fosters',
       price: 2.20,
       abv: 5.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Hogshead Wolverhampton', 'The George Wallis']
     }
@@ -254,7 +254,7 @@ export default [
       name: 'Fosters',
       price: 2.70,
       abv: 5.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Ye Olde Trip To Jerusalem', 'The Cross Keys', 'Canalhouse']
     }
@@ -332,7 +332,7 @@ export default [
       name: 'San Miguel',
       price: 4.60,
       abv: 5.0,
-      image: 'https://i.imgur.com/j3ccmla.png',
+      image: 'https://i.imgur.com/XFr6GY5.png',
       bio: 'San Miguel is a pilsner-style lager, golden yellow in colour with reflections of old gold. On the nose it offers hints of smoke against a background of grains. On the palate it is balanced, toasted, of medium bitterness with a prevailing subtle toasting of the barley. ',
       locations: ['The Black Horse', 'The Bowl Inn', 'The Little Black Dog']
     }
@@ -345,7 +345,7 @@ export default [
       name: 'Grolsch Premium Pilsner',
       price: 3.30,
       abv: 4.0,
-      image: 'https://i.imgur.com/uTtwFru.png',
+      image: 'https://i.imgur.com/N4OC2ZC.png',
       bio: 'Grolsch has been brewed in the Netherlands for 400 years. Our Pilsner is brewed for refreshment and greater depth of flavour. Perfectly blending malted barley and 2 hops - one for aroma, one for bitterness - creates our famous taste',
       locations: ['The Kings Arms', 'The Cricketers']
     }
@@ -358,7 +358,7 @@ export default [
       name: 'Carlsberg',
       price: 3.00,
       abv: 4.8,
-      image: 'https://i.imgur.com/FpmZVIh.png',
+      image: 'https://i.imgur.com/Fc8iUZo.png',
       bio: 'The brew has a full mouthfeel, a great smoothness and depth of flavour, with crisp bitterness and a distinctive hop aroma in every can. ',
       locations: ['Toby Carvery Goldington', 'The Anchor', ' The Stone Jug']
     }
@@ -371,7 +371,7 @@ export default [
       name: 'Stella',
       price: 3.40,
       abv: 5.0,
-      image: 'https://i.imgur.com/GtMA6xQ.png',
+      image: 'https://i.imgur.com/mG466Qu.png',
       bio: 'True to the time-honored recipe, Stella Artois is crafted with three ingredients–saaz hops, malted barley, and water. It has a wonderful hop aroma, well-balanced malt sweetness, crisp hop bitterness and a soft dry finish. It is the perfect beer to enjoy with food and friends.',
       locations: ['Alberrys', 'Bishops Finger', 'The Monument']
     }
@@ -384,7 +384,7 @@ export default [
       name: 'Guiness',
       price: 3.50,
       abv: 4.2,
-      image: 'https://i.imgur.com/bmrr3wW.png',
+      image: 'https://i.imgur.com/EOnU8LE.png',
       bio: 'Guinness has a malty sweetness and a hoppy bitterness, with notes of coffee and chocolate. A roasted flavor also comes through, courtesy of the roasted unmalted barley that goes into its brewing.',
       locations: ['1815 The Union Bar', 'The Courtyard']
     }
@@ -397,7 +397,7 @@ export default [
       name: 'Fosters',
       price: 2.60,
       abv: 4.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover',
       locations: ['Acanteen', 'The Woolpack', 'Bar Vino', 'The Rayleigh Arms']
     }
@@ -410,7 +410,7 @@ export default [
       name: 'Timothy Taylors Landlord',
       price: 2.50,
       abv: 4.3,
-      image: 'https://i.imgur.com/SqsIivs.png',
+      image: 'https://i.imgur.com/xh9H7vU.png',
       bio: 'Timothy Taylors best known ale is Landlord, a pale ale, 4.3% abv when cask conditioned, and 4.1% when sold filtered in the bottle.Medium to strong strength finish, nice biscuity feel, sharp barley and bread, ending with some leafy spices. ',
       locations: ['The Swan', 'Two Brews', 'The White Hart', 'Boadicea']
     }
@@ -423,7 +423,7 @@ export default [
       name: 'San Miguel',
       price: 3.40,
       abv: 5.0,
-      image: 'https://i.imgur.com/j3ccmla.png',
+      image: 'https://i.imgur.com/XFr6GY5.png',
       bio: 'San Miguel is a pilsner-style lager, golden yellow in colour with reflections of old gold. On the nose it offers hints of smoke against a background of grains. On the palate it is balanced, toasted, of medium bitterness with a prevailing subtle toasting of the barley.',
       locations: ['Wooden Bridge', 'Anchor & Horseshoes']
     }
@@ -436,7 +436,7 @@ export default [
       name: 'Carlsberg',
       price: 2.00,
       abv: 4.8,
-      image: 'https://i.imgur.com/FpmZVIh.png',
+      image: 'https://i.imgur.com/Fc8iUZo.png',
       bio: 'The brew has a full mouthfeel, a great smoothness and depth of flavour, with crisp bitterness and a distinctive hop aroma in every can.',
       locations: ['The Thomas Wolsey', 'The Steamboat Tavern', 'Royal George']
     }
@@ -449,7 +449,7 @@ export default [
       name: 'Carlsberg',
       price: 1.54,
       abv: 4.8,
-      image: 'https://i.imgur.com/FpmZVIh.png',
+      image: 'https://i.imgur.com/Fc8iUZo.png',
       bio: 'The brew has a full mouthfeel, a great smoothness and depth of flavour, with crisp bitterness and a distinctive hop aroma in every can.',
       locations: ['The Champion', 'Adam & Eve', 'Ridley Road Market Bar', 'The Citte of Yorke', 'The Social']
     }
@@ -462,7 +462,7 @@ export default [
       name: 'Carlsberg',
       price: 1.99,
       abv: 4.8,
-      image: 'https://i.imgur.com/FpmZVIh.png',
+      image: 'https://i.imgur.com/Fc8iUZo.png',
       bio: 'The brew has a full mouthfeel, a great smoothness and depth of flavour, with crisp bitterness and a distinctive hop aroma in every can.',
       locations: ['Star', 'Wigmore Arms', 'Frog & Rhubarb']
     }
@@ -475,7 +475,7 @@ export default [
       name: 'San Miguel',
       price: 3.40,
       abv: 5.0,
-      image: 'https://i.imgur.com/j3ccmla.png',
+      image: 'https://i.imgur.com/XFr6GY5.png',
       bio: 'San Miguel is a pilsner-style lager, golden yellow in colour with reflections of old gold. On the nose it offers hints of smoke against a background of grains. On the palate it is balanced, toasted, of medium bitterness with a prevailing subtle toasting of the barley.',
       locations: ['Market House', 'The Druids Arms', 'The Society Rooms']
     }
@@ -488,7 +488,7 @@ export default [
       name: 'San Miguel',
       price: 4.10,
       abv: 5.0,
-      image: 'https://i.imgur.com/j3ccmla.png',
+      image: 'https://i.imgur.com/XFr6GY5.png',
       bio: 'San Miguel is a pilsner-style lager, golden yellow in colour with reflections of old gold. On the nose it offers hints of smoke against a background of grains. On the palate it is balanced, toasted, of medium bitterness with a prevailing subtle toasting of the barley. ',
       locations: ['Charlie', 'J D Wetherspoon']
     }
@@ -501,7 +501,7 @@ export default [
       name: 'Fosters',
       price: 2.90,
       abv: 4.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover.',
       locations: ['Wetherspoons', 'Midsummer Tap', 'BrewDog Milton Keynes']
     }
@@ -514,7 +514,7 @@ export default [
       name: 'Fosters',
       price: 2.80,
       abv: 4.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover',
       locations: ['Bar 11', 'Franks Bar', 'The Fat Cat Pub']
     }
@@ -527,7 +527,7 @@ export default [
       name: 'Fosters',
       price: 3.00,
       abv: 4.0,
-      image: 'https://i.imgur.com/W1Qe874.png',
+      image: 'https://i.imgur.com/v43Som0.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover',
       locations: ['Ship Anson', 'The Hole In The Wall']
     }
@@ -540,7 +540,7 @@ export default [
       name: 'Grolsch Premium Pilsner',
       price: 3.30,
       abv: 4.0,
-      image: 'https://i.imgur.com/uTtwFru.png',
+      image: 'https://i.imgur.com/N4OC2ZC.png',
       bio: 'Grolsch has been brewed in the Netherlands for 400 years. Our Pilsner is brewed for refreshment and greater depth of flavour. Perfectly blending malted barley and 2 hops - one for aroma, one for bitterness - creates our famous taste',
       locations: ['The Old Walnut Tree', 'The Oakwood', 'Guildford Southend']
     }
@@ -553,7 +553,7 @@ export default [
       name: 'Stella',
       price: 2.50,
       abv: 5.0,
-      image: 'https://i.imgur.com/GtMA6xQ.png',
+      image: 'https://i.imgur.com/mG466Qu.png',
       bio: 'True to the time-honored recipe, Stella Artois is crafted with three ingredients–saaz hops, malted barley, and water. It has a wonderful hop aroma, well-balanced malt sweetness, crisp hop bitterness and a soft dry finish. It is the perfect beer to enjoy with food and friends.',
       locations: ['Seven Red Roses', 'Bull & Chequers', ' The Water Tower']
     }
