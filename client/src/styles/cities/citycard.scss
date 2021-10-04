@@ -10,6 +10,7 @@
 
 .beer-pic-image{
   // width: 400px;
+  min-height: 850px;
   max-height: 850px;
   min-height: 850px;
   // box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
@@ -30,21 +31,28 @@
 }
 
 .beers-side {
-  margin: 80px auto 0;
-  align-items: center;
+  margin: 130px auto 0;
+  padding-bottom: 50px;
   p{
     max-width: 40vw;
   }
   .beer-info{
     margin-left: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     p{
       font-size: 30px;
     }
     h2{
       text-align: left;
+    }
+    h3{
+      font-size: 35px;
+      margin-top: 50px;
+    }
+    ul{
+      font-size: 20px;
+      margin-top: 15px;
+      list-style: none;
+      padding-left: 0;
     }
   }
 }
@@ -55,7 +63,7 @@ a {
 
 .review-link {
   color: white;
-  margin-top: 500px;
+  margin-top: 50px;
   padding: 5px 8px 5px 8px;
   display: inline-block;
   border-radius: 6px;
@@ -71,7 +79,9 @@ a {
 
 .list-link {
   color: white;
-  margin-top: 500px;
+  position: relative;
+  top: 30px;
+  left: 20px;
   padding: 5px 8px 5px 8px;
   display: inline-block;
   border-radius: 6px;
@@ -87,4 +97,53 @@ a {
 
 .test {
   color: black;
+}
+
+.review{
+  margin: 0 auto 0 130px;
+  .review-post{
+    background-color: rgba(193, 129, 11, 0.6);
+    border-radius: 10px;
+    max-width: 322.56px;
+    position: relative;
+    bottom: 10px;
+    margin: 10px;
+  }
+  h2{
+    text-align: left;
+    margin-bottom: 0;
+  }
+  p{
+    margin: 0 auto;
+    padding: 7px;
+  }
+  .text-post{
+    max-width: 320px;
+    word-break: break-all;
+  }
+  .fa-trash-alt {
+    margin: 0 0 7px 7px;
+    &:hover{
+      animation: shake 1s infinite;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
 }

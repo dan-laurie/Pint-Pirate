@@ -306,7 +306,7 @@ export default [
       name: 'Innes and Gunn',
       price: 2.49,
       abv: 6.6,
-      image: 'https://imgur.com/JvsVKlm.jpg',
+      image: 'https://i.imgur.com/uSW2uh6.png',
       bio: 'This Scottish Golden Beer is cask-matured using single malt whisky casks for unparalleled smoothness.',
       locations: ['Archibald Simpson']
     }
@@ -318,8 +318,8 @@ export default [
     pint: {
       name: 'Tennents',
       price: 2.60,
-      abv: 4.0,
-      image: 'https://i.imgur.com/uSW2uh6.png',
+      abv: 4.0, 
+      image: 'https://i.imgur.com/IKHmXHq.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['The Stag', 'Ma Camerons', 'Prince of Wales']
     }
@@ -381,7 +381,7 @@ export default [
     bio: 'Cambridge is a city on the River Cam in eastern England, home to the prestigious University of Cambridge, dating to 1209. University colleges include King\'s, famed for its choir and towering Gothic chapel, as well as Trinity, founded by Henry VIII, and St John\'s, with its 16th-century Great Gate. University museums have exhibits on archaeology and anthropology, polar exploration, the history of science and zoology.',
     image: 'https://i.imgur.com/xJ4XgLd.jpg',
     pint: {
-      name: 'Guiness',
+      name: 'Guinness',
       price: 3.50,
       abv: 4.2,
       image: 'https://i.imgur.com/EOnU8LE.png',
