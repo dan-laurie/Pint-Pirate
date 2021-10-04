@@ -1,11 +1,15 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
+import { getTokenFromLocalStorage } from './helpers/auth'
 
 const CityCard = () => {
   const [city, setCity] = useState(null)
   const [hasError, setHasError] = useState(false)
-  const { id } = useParams()
+  const { id, reviewId } = useParams()
+
+
+  const token = getTokenFromLocalStorage() 
 
   useEffect(() => {
     const getCity = async () => {
@@ -20,8 +24,30 @@ const CityCard = () => {
     }
     getCity()
   },[id])
+
+  const handleDelete = async (e) => {
+    e.preventDefault()
+    console.log(e.target.value)
+    try {
+      await axios.delete(`/cities/${id}/reviews/${e.target.value}`,{
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      history.push(`/cities/${id}`)
+    } catch (err) {
+      console.log(err)
+    }
+    
+  }
+
   return (
     <div className="beer-page"> 
+      <div>
+        <Link to={'/cities'}>
+          <h4 className='list-link'>Back to list</h4>
+        </Link>
+      </div>
       {city ?
         <><div className="container-city">
           <div className="city-info d-flex">
@@ -42,19 +68,31 @@ const CityCard = () => {
               <p>£{city.pint.price.toFixed(2)}</p>
               <p>{city.pint.abv}%</p>
               <p>{city.pint.bio}</p>
+              <h3>Where you can find it</h3>
               <ul>
                 {city.pint.locations.map((city, i) => {
                   return <li key={i}>{city}</li>
                 })}
               </ul>
-            </div>
-            <div className='card-buttons'>
               <Link to={`/cities/${city.id}/reviews`}>
                 <h4 className='review-link'>Post a review!</h4>
               </Link>
-              <Link to={'/cities'}>
-                <h4 className='list-link'>Back to list</h4>
-              </Link>
+            </div>
+          </div>
+          <div className="review d-flex flex-column flex-wrap">
+            <h2>Reviews</h2>
+            <div className="div d-flex flex-wrap">
+              {city.review.map((c, i) => {
+                return (
+                  <div className="review-post" key={i}>
+                    <p>Posted By: {c.owner}</p>
+                    <p className="text-post">{c.text}</p>
+                    <p>Rating: {c.rating}</p>
+                    <p>Posted At: {c.createdAt}</p>
+                    <p><i className="fas fa-trash-alt" onClick={handleDelete} value={c._id}></i></p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>
