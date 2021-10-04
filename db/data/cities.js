@@ -20,7 +20,7 @@ export default [
       name: 'Fosters',
       price: 1.80,
       abv: 4.0,
-      image: 'https://i.imgur.com/b1UDTLb.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'The lager is hopped with selected oil extracts of Super Pride of Ringwood hops, which like any modern beer, is added after fermentation to minimise losses to the yeast sediment.The hop is sourced from the only two farms in Australia that grow it. Known as a nighout-lager, cheap and cheerful.',
       locations: ['City Arms', 'The Great Western - JD Wetherspoon', 'The Borough']
     }
@@ -98,7 +98,7 @@ export default [
       name: 'Fosters',
       price: 3.30,
       abv: 4.0,
-      image: 'https://i.imgur.com/b1UDTLb.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'The lager is hopped with selected oil extracts of Super Pride of Ringwood hops, which like any modern beer, is added after fermentation to minimise losses to the yeast sediment.The hop is sourced from the only two farms in Australia that grow it. Known as a nighout-lager, cheap and cheerful.',
       locations: ['Mitre', 'The Bedford', 'The Frog and Frigate']
     }
@@ -176,7 +176,7 @@ export default [
       name: 'Fosters',
       price: 2.50,
       abv: 5.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Wetherspoons']
     }
@@ -202,7 +202,7 @@ export default [
       name: 'Fosters',
       price: 1.55,
       abv: 5.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['The Ardwick']
     }
@@ -228,7 +228,7 @@ export default [
       name: 'Fosters',
       price: 2.20,
       abv: 5.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Friary Leicester', 'The High Cross']
     }
@@ -241,7 +241,7 @@ export default [
       name: 'Fosters',
       price: 2.20,
       abv: 5.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Hogshead Wolverhampton', 'The George Wallis']
     }
@@ -254,7 +254,7 @@ export default [
       name: 'Fosters',
       price: 2.70,
       abv: 5.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Ye Olde Trip To Jerusalem', 'The Cross Keys', 'Canalhouse']
     }
@@ -397,7 +397,7 @@ export default [
       name: 'Fosters',
       price: 2.60,
       abv: 4.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover',
       locations: ['Acanteen', 'The Woolpack', 'Bar Vino', 'The Rayleigh Arms']
     }
@@ -501,7 +501,7 @@ export default [
       name: 'Fosters',
       price: 2.90,
       abv: 4.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover.',
       locations: ['Wetherspoons', 'Midsummer Tap', 'BrewDog Milton Keynes']
     }
@@ -514,7 +514,7 @@ export default [
       name: 'Fosters',
       price: 2.80,
       abv: 4.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover',
       locations: ['Bar 11', 'Franks Bar', 'The Fat Cat Pub']
     }
@@ -527,7 +527,7 @@ export default [
       name: 'Fosters',
       price: 3.00,
       abv: 4.0,
-      image: 'https://i.imgur.com/v43Som0.png',
+      image: 'https://i.imgur.com/oQeJWE4.png',
       bio: 'An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish. Its balance of subtle fruitiness and vanilla is ideal for the sweeter-toothed lager lover',
       locations: ['Ship Anson', 'The Hole In The Wall']
     }
