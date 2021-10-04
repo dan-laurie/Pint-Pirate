@@ -60,7 +60,7 @@ const CityList = () => {
           return (
             <div className="cities col-lg-3 mb-4 col-md-6" key={city.id}>
               { userIsAuthenticated() ?
-                <Link className="card-link" to={`/beers/${city.id}`}>
+                <Link className="card-link" to={`/cities/${city.id}`}>
                   <div  className='card'> 
                     <h4 className="city-name"value={city.name}>{city.name}</h4>
                     <img className="city-image" src={city.image}></img>

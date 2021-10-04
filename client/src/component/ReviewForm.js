@@ -1,14 +1,50 @@
 import React, { useState } from 'react'
 import Select from 'react-select'
-import { Link } from 'react-router-dom'
+import { Link, useHistory, useParams } from 'react-router-dom'
+import axios from 'axios'
+import { getTokenFromLocalStorage } from './helpers/auth'
 
 const ReviewForm = () => {
 
-  // const [ formData, setFormData ] = useState({
-  //   text: '',
-  //   rating: '',
-  //   imageUpload: '',
-  // })
+  const history = useHistory()
+  const token = getTokenFromLocalStorage()
+
+  const [ formData, setFormData ] = useState({
+    text: '',
+    rating: '',
+    imageUpload: '',
+  })
+  const [ errors, setErrors ] = useState({
+    text: '',
+    rating: '',
+    imageUpload: '',
+  })
+
+  const { id } = useParams()
+
+  const handleChange = (e) => {
+    const newObject = { ...formData, [e.target.name]: e.target.value }
+    setFormData(newObject)
+    const newErrors = { ...errors, [e.target.name]: '' }
+    setErrors(newErrors)
+  }
+
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    try {
+      await axios.post(`/api/cities/${id}/reviews`, 
+        formData, 
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      history.push(`/cities/${id}`)
+    } catch (err) {
+      console.log(err)
+    }
+  }
 
   return (
     <div className="site-wrapper">
@@ -17,20 +53,21 @@ const ReviewForm = () => {
           <div className="container">
             <div className="row">
               
-              <form className="review-form col-10 offset-1 mt-4 col-md-10 offset-md-3">
+              <form className="review-form col-10 offset-1 mt-4 col-md-10 offset-md-3" onSubmit={handleSubmit}>
                 <div className="form-field">
                   <label className="review-label"><h3>Your Review</h3></label>
                   <div className="control">
-                    <textarea
+                    <textarea onInput={handleChange}
                       className="textarea"
-                      name="description"
+                      name="text"
+                      value={formData.text}
                     />
                   </div>
                 </div>
                 <div className="rating form-field">
                   <label className="review-label"><p>Your Rating</p></label>
                   <div className="control">
-                    <select name="rating">
+                    <select name="rating" onChange={handleChange} value={formData.rating}>
                       <option value="" disabled></option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -48,7 +85,7 @@ const ReviewForm = () => {
                 <div className="form-field">
                   {/* <ImageUpload 
                 value={formData.profileImage}
-                name="profileImage"
+                name="imageUpload"
                 handleImageUrl={handleImageUrl}
               /> */}
                 </div>

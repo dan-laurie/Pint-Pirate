@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route exact path='/beers'>
+        <Route exact path='/cities'>
           <CityList />
         </Route>
         <Route exact path='/login'>
@@ -31,10 +31,10 @@ function App() {
         <Route exact path='/about'>
           <About />
         </Route>
-        <Route exact path='/beers/:id'>
+        <Route exact path='/cities/:id'>
           <CityCard />
         </Route>
-        <Route exact path='/beers/:id/reviews'>
+        <Route exact path='/cities/:id/reviews'>
           <ReviewForm />
         </Route>
         
