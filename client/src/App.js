@@ -8,6 +8,7 @@ import Register from './component/auth/register'
 import CityCard from './component/CityCard'
 import ReviewForm from './component/ReviewForm'
 import About from './component/About'
+import Map from './component/map/Map'
 import Footer from './component/Footer'
 
 function App() {
@@ -37,7 +38,9 @@ function App() {
         <Route exact path='/cities/:id/reviews'>
           <ReviewForm />
         </Route>
-        
+        <Route>
+          <Map exact path='/map'/>
+        </Route>
       </Switch>
       <Footer />
     </BrowserRouter>
