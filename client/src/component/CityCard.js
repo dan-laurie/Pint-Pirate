@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useHistory } from 'react-router-dom'
 import { getTokenFromLocalStorage } from './helpers/auth'
 
 const CityCard = () => {
@@ -8,8 +8,9 @@ const CityCard = () => {
   const [hasError, setHasError] = useState(false)
   const { id, reviewId } = useParams()
 
-
+  const history = useHistory()
   const token = getTokenFromLocalStorage() 
+  // const revId = city.review._id
 
   useEffect(() => {
     const getCity = async () => {
@@ -26,15 +27,15 @@ const CityCard = () => {
   },[id])
 
   const handleDelete = async (e) => {
-    e.preventDefault()
-    console.log(e.target.value)
+    // e.preventDefault()
+
     try {
-      await axios.delete(`/cities/${id}/reviews/${e.target.value}`,{
+      await axios.delete(`/api/cities/${id}/reviews/${e.target.name}`,{
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
-      history.push(`/cities/${id}`)
+      history.back()
     } catch (err) {
       console.log(err)
     }
@@ -82,14 +83,15 @@ const CityCard = () => {
           <div className="review d-flex flex-column flex-wrap">
             <h2>Reviews</h2>
             <div className="div d-flex flex-wrap">
-              {city.review.map((c, i) => {
+              {city.review.map(c => {
                 return (
-                  <div className="review-post" key={i}>
+                  <div className="review-post" key={c._id}>
                     <p>Posted By: {c.owner}</p>
                     <p className="text-post">{c.text}</p>
                     <p>Rating: {c.rating}</p>
                     <p>Posted At: {c.createdAt}</p>
-                    <p><i className="fas fa-trash-alt" onClick={handleDelete} value={c._id}></i></p>
+                    {/* <i onClick={handleDelete} className="fas fa-trash-alt" name={c._id}></i> */}
+                    <button onClick={handleDelete} name={c._id}>Delete</button>
                   </div>
                 )
               })}
