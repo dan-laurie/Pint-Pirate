@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams, useHistory } from 'react-router-dom'
 import { getTokenFromLocalStorage } from './helpers/auth'
 
 const CityCard = () => {
@@ -8,7 +8,7 @@ const CityCard = () => {
   const [hasError, setHasError] = useState(false)
   const { id, reviewId } = useParams()
 
-
+  const history = useHistory()
   const token = getTokenFromLocalStorage() 
   // const revId = city.review._id
 
@@ -28,15 +28,14 @@ const CityCard = () => {
 
   const handleDelete = async (e) => {
     // e.preventDefault()
-    const revId = e.target
-    console.log(revId.name)
+
     try {
-      await axios.delete(`/cities/${id}/reviews/${e.target.name}`,{
+      await axios.delete(`/api/cities/${id}/reviews/${e.target.name}`,{
         headers: {
           Authorization: `Bearer ${token}`,
         },
       })
-      history.push(`/cities/${id}`)
+      history.back()
     } catch (err) {
       console.log(err)
     }
@@ -91,7 +90,8 @@ const CityCard = () => {
                     <p className="text-post">{c.text}</p>
                     <p>Rating: {c.rating}</p>
                     <p>Posted At: {c.createdAt}</p>
-                    <i onClick={handleDelete} className="fas fa-trash-alt" name={c._id}></i>
+                    {/* <i onClick={handleDelete} className="fas fa-trash-alt" name={c._id}></i> */}
+                    <button onClick={handleDelete} name={c._id}>Delete</button>
                   </div>
                 )
               })}
