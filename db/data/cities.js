@@ -111,7 +111,7 @@ export default [
       name: 'Hydes Bitter',
       price: 2.00,
       abv: 3.8,
-      image: 'https://imgur.com/RSJhWm4.jpg',
+      image: 'https://i.imgur.com/JaIpx84.png',
       bio: 'A classic and highly popular amber coloured session ale. Made using a combination of the finest malts and English hops – Fuggles and Wye Challenger to provide a fruity and spicy palate.',
       locations: ['Sinclairs Oyster Bar', 'The Friendship Inn', 'The City Arms']
     }
@@ -124,7 +124,7 @@ export default [
       name: 'Theakstons',
       price: 1.90,
       abv: 4.5,
-      image: 'https://imgur.com/RSJhWm4.jpg',
+      image: 'https://i.imgur.com/bKt2T8w.png',
       bio: 'A potent mix of Summit, El Dorado, Cascade and Chinook hops delivers a hefty zing of spicy citrus, sweet orange, and grapefruit. Generous helpings of Munich malt give balance and a pale gold coloured appearance, all to create the ultimate thirst quencher!',
       locations: ['Miners Arms']
     }
@@ -137,7 +137,7 @@ export default [
       name: 'Farmers Blonde',
       price: 2.00,
       abv: 4.3,
-      image: 'https://imgur.com/XtkpOFH.jpg',
+      image: 'https://i.imgur.com/WzlBtgh.png',
       bio: 'This award winning, very pale brilliant blonde beer has citrus and summer fruit aromas making it an extremely refreshing and \'easy drinking\' ale.',
       locations: ['Nags Head Inn', 'King & Miller']
     }
@@ -150,7 +150,7 @@ export default [
       name: 'Greene King IPA',
       price: 1.89,
       abv: 4.0,
-      image: 'https://imgur.com/QgcIoXy.jpg',
+      image: 'https://i.imgur.com/Tr2diZe.png',
       bio: ' Carefully selected pale, crystal and black malts join with Pilgrim, Challenger and First Gold Hops make this complex, refreshing ale.',
       locations: ['The Turls Green']
     }
@@ -163,7 +163,7 @@ export default [
       name: 'Sam Smiths',
       price: 3.56,
       abv: 4.5,
-      image: 'https://imgur.com/undefined.jpg',
+      image: 'https://i.imgur.com/l7DGynl.png',
       bio: 'Brewed with well water, best barley malt, yeast and aromatic hops; fermented in \'stone Yorkshire squares\' to create a full, rounded flavour and after-taste.',
       locations: ['Samuel Smiths Pubs']
     }
@@ -176,7 +176,7 @@ export default [
       name: 'Fosters',
       price: 2.50,
       abv: 5.0,
-      image: 'https://imgur.com/juRPkMO.jpg',
+      image: 'https://i.imgur.com/W1Qe874.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Wetherspoons']
     }
@@ -189,7 +189,7 @@ export default [
       name: 'Carling',
       price: 1.90,
       abv: 3.7,
-      image: 'https://imgur.com/L8vbLgW.jpg',
+      image: 'https://i.imgur.com/XGuCrCA.png',
       bio: 'Carling is brewed to have the perfect balance of sweetness and bitterness, giving it that brilliantly refreshing taste from the first sip to the last.',
       locations: ['Woodys Liverpool', 'Rubber Soul']
     }
@@ -202,7 +202,7 @@ export default [
       name: 'Fosters',
       price: 1.55,
       abv: 5.0,
-      image: 'https://imgur.com/juRPkMO.jpg',
+      image: 'https://i.imgur.com/W1Qe874.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['The Ardwick']
     }
@@ -215,7 +215,7 @@ export default [
       name: 'Carling',
       price: 2.50,
       abv: 3.7,
-      image: 'https://imgur.com/L8vbLgW.jpg',
+      image: 'https://i.imgur.com/XGuCrCA.png',
       bio: 'Carling is brewed to have the perfect balance of sweetness and bitterness, giving it that brilliantly refreshing taste from the first sip to the last.',
       locations: ['The White Star', 'Hanley Brewers Fayre']
     }
@@ -228,7 +228,7 @@ export default [
       name: 'Fosters',
       price: 2.20,
       abv: 5.0,
-      image: 'https://imgur.com/juRPkMO.jpg',
+      image: 'https://i.imgur.com/W1Qe874.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Friary Leicester', 'The High Cross']
     }
@@ -241,7 +241,7 @@ export default [
       name: 'Fosters',
       price: 2.20,
       abv: 5.0,
-      image: 'https://imgur.com/juRPkMO.jpg',
+      image: 'https://i.imgur.com/W1Qe874.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Hogshead Wolverhampton', 'The George Wallis']
     }
@@ -254,7 +254,7 @@ export default [
       name: 'Fosters',
       price: 2.70,
       abv: 5.0,
-      image: 'https://imgur.com/juRPkMO.jpg',
+      image: 'https://i.imgur.com/W1Qe874.png',
       bio: 'Fosters is a light, golden lager with a medium malt character. An easy-drinking lager with a delicate fruity hop aroma and a balanced taste, Fosters rolls of the tongue leaving a clean crisp finish.',
       locations: ['Ye Olde Trip To Jerusalem', 'The Cross Keys', 'Canalhouse']
     }
@@ -267,7 +267,7 @@ export default [
       name: 'Tennents',
       price: 2.10,
       abv: 4.0,
-      image: 'https://imgur.com/ND6yc65.jpg',
+      image: 'https://i.imgur.com/IKHmXHq.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['Tennents Bar', 'Drum & Monkey', 'Curlers Rest']
     }
@@ -280,7 +280,7 @@ export default [
       name: 'Tennents',
       price: 3.10,
       abv: 4.0,
-      image: 'https://imgur.com/ND6yc65.jpg',
+      image: 'https://i.imgur.com/IKHmXHq.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['The Worlds End', 'Bennets Bar', 'The Bow Bar']
     }
@@ -293,7 +293,7 @@ export default [
       name: 'Tennents',
       price: 2.70,
       abv: 4.0,
-      image: 'https://imgur.com/ND6yc65.jpg',
+      image: 'https://i.imgur.com/IKHmXHq.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['Trades House', 'Dukes Corner', 'The Phoenix']
     }
@@ -319,7 +319,7 @@ export default [
       name: 'Tennents',
       price: 2.60,
       abv: 4.0,
-      image: 'https://imgur.com/ND6yc65.jpg',
+      image: 'https://i.imgur.com/uSW2uh6.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['The Stag', 'Ma Camerons', 'Prince of Wales']
     }
