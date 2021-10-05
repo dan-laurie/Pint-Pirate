@@ -9,7 +9,7 @@ export const getAllCities = async (_req, res) => {
 //CREATE CITY
 export const createCity = async (req, res) => {
   try {
-    const cityWithOwner = { ...req.body, owner: req.currentUser._id }
+    const cityWithOwner = { ...req.body, owner: req.currentUser }
     const cityToAdd = await City.create(cityWithOwner)
     return res.status(201).json(cityToAdd)
   } catch (err){

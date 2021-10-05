@@ -6,8 +6,9 @@
   h2 {
     text-align: center;
     padding: 15px 0;
-    color: $whitecolor;
-    font-size: 50px;
+    color: $fontcolor;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100px;
   }
 }
 .beer-filter {
@@ -16,7 +17,7 @@
   margin-bottom: 20px;
 }
 .city-name {
-  color: white;
+  color: $fontcolor;
   text-align: center;
   padding-top: 5px;
 }
@@ -37,7 +38,7 @@
     transform: scale(1.05);
   }
   h6 {
-    color: white;
+    color: $fontcolor;
     text-align: center;
     padding-top: 5px;
   }
@@ -54,10 +55,10 @@
   border-radius: 6px;
   background-color: rgba(193, 129, 11, 0);
   border: 1px solid rgba(193, 129, 11);
-  color: white;
+  color: $fontcolor;
 }
 ::placeholder {
-  color: white;
+  color: $fontcolor;
 }
 
 .sort {
@@ -67,5 +68,5 @@
   border-radius: 6px;
   background-color: rgba(193, 129, 11, 0);
   border: 1px solid rgba(193, 129, 11);
-  color: white;
+  color: $fontcolor;
 }

@@ -61,7 +61,7 @@ const CityCard = () => {
     <div className="beer-page"> 
       <div>
         <Link to={'/cities'}>
-          <h4 className='list-link'>Back to list</h4>
+          <h4 className='list-link'>Back to List</h4>
         </Link>
       </div>
       {city ?
@@ -95,24 +95,25 @@ const CityCard = () => {
               </Link>
             </div>
           </div>
-          <div className="review d-flex flex-column flex-wrap">
+          <div className="review d-flex flex-column align-items-center flex-wrap">
             {city.review.length > 0 ?
-              <><h2>Reviews</h2><div className="div d-flex flex-wrap">
-                {city.review.map(c => {
-                  const time = new Date(c.createdAt)
-                  return (
-                    <div className="review-post" key={c._id}>
-                      <p>👤 : {c.username}</p>
-                      <p className="text-post">📝 : {c.text}</p>
-                      <p>📈 : {c.rating}</p>
-                      <p>📬 : {time.toLocaleString()}</p>
-                      {userIsOwner(c.owner) && 
+              <><h2>Reviews - Average User Rating: {city.avgRating}</h2>
+                <div className="div review-box d-flex flex-wrap justify-content-center">
+                  {city.review.map(c => {
+                    const time = new Date(c.createdAt)
+                    return (
+                      <div className="review-post" key={c._id}>
+                        <p>👤 : {c.username}</p>
+                        <p className="text-post">📝 : {c.text}</p>
+                        <p>📈 : {c.rating}</p>
+                        <p>📬 : {time.toLocaleString()}</p>
+                        {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
-                      }
-                    </div>
-                  )
-                })}
-              </div></>
+                        }
+                      </div>
+                    )
+                  })}
+                </div></>
               :
               <h2></h2>
             }
