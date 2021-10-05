@@ -2,17 +2,15 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="site-wrapper">
+    <div className="site-wrapper1">
       <div className="about-page">
         <div className="about-info d-flex flex-column">
           <h1>About</h1>
-          <hr />
           <p>Welcome to Pint Pirate! <br /> A project created during General Assembly&apos;s SEI by Dan, Wala and Kwasi.<br />
         A simple easy to use web application to find the cheapest pint in all major UK cities. <br />Feel free to add cities that are not on the database or simply share your drinking expriences at different cities!
           </p>
           <div className="tech">
             <h3>Technologies Used</h3>
-            <hr />
             <div className="bullet-list d-flex justify-content-center">
               <i className="devicon-html5-plain-wordmark colored"></i>
               <i className="devicon-sass-original colored"></i>

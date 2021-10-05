@@ -1,7 +1,7 @@
 .site-wrapper {
-  height: calc(100vh - 56px);
+  height: calc(100vh - 141px);
   h1, h2, p {
-    color: $whitecolor;
+    color: $fontcolor;
   }
 }
 
@@ -10,8 +10,10 @@
   top: calc(40% - 56px);
   margin-top: 90px;
   h1 {
-    font-size: 100px;
+    font-size: 150px;
     margin-bottom: 30px;
+    font-family: 'Permanent Marker', cursive;
+    color: $fontcolor;
   }
   p,
   .explore-btn {
@@ -33,7 +35,7 @@
     background-color: rgba(193, 129, 11, 0);
   }
   span {
-    color: $whitecolor;
+    color: $fontcolor;
     margin-right: 10px;
   }
 }

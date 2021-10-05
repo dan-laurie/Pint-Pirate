@@ -1,16 +1,21 @@
-.about-page{
+.site-wrapper1{
+  height: calc(100vh - 141px);
+  color: $fontcolor;
+}
+.about-page{ 
   display: flex;
   flex-direction: column;
   align-items: center;
   .about-info{
     text-align: center;
-    margin-top: 100px;
+    margin-top: 70px;
   }
   h1{
-    font-size: 50px;
+    font-size: 100px;
+    font-family: 'Permanent Marker', cursive;
   }
   hr{
-    color: white;
+    color: $fontcolor;
     width: 200px;
     margin: 10px auto;
     height: 3px;
@@ -21,15 +26,16 @@
   }
 
   .tech{
-    margin: 20px auto;
+    margin: 70px auto;
     .colored {
       font-size: 50px;
       margin: 10px;
     }
   
     h3{
-      color: white;
-      font-size: 35px;
+      color: $fontcolor;
+      font-size: 50px;
+      font-family: 'Permanent Marker', cursive;
     }
   
     .bullet-list{
@@ -40,8 +46,12 @@
   }
 
   .contact-info{
-    color: white;
+    color: $fontcolor;
     margin-top: 25px;
+    h3{
+      font-weight: bold;
+    }
+    
     i{
       font-size: 50px;
       margin: 10px;
@@ -54,7 +64,7 @@
       color: rgb(29, 161, 242);
     }
     .fa-github{
-      color: white;
+      color: $fontcolor;
     }
     .fa-linkedin{
       color: #0072b1;
