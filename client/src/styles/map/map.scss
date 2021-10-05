@@ -1,9 +1,15 @@
 .map-container {
   height: 600px;
   width: 600px;
-  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 .sidebar {
   margin: 0 auto;
-  max-width: 600px;
+  width: 600px;
+  background-color: rgba(193, 129, 11);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
 }

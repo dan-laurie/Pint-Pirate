@@ -40,6 +40,9 @@ const Navbar = () => {
                     <Link to="/map">Map</Link>
                   </li>
                   <li className="nav-item">
+                    <Link to="/cities">City List</Link>
+                  </li>
+                  <li className="nav-item">
                     <span className="logout"onClick={handleLogout}>Logout</span>
                   </li>
 

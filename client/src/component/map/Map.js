@@ -30,7 +30,7 @@ const Map = () => {
   )
 
   return (
-    <div className="beer-page">
+    <div className="beer-page d-flex flex-column align-items-center justify-content-center">
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
