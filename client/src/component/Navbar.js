@@ -37,8 +37,12 @@ const Navbar = () => {
               userIsAuthenticated() ?
                 <>
                   <li className="nav-item">
+                    <Link to="/map">Map</Link>
+                  </li>
+                  <li className="nav-item">
                     <span className="logout"onClick={handleLogout}>Logout</span>
                   </li>
+
                 </>
                 :
                 <>

@@ -30,7 +30,7 @@ const Map = () => {
   )
 
   return (
-    <div>
+    <div className="beer-page">
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
