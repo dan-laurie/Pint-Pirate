@@ -63,7 +63,7 @@ export const postReview = async (req, res) => {
   try {
     const city = await City.findById(id)
     if (!city) throw new Error()
-    const newReview = { ...req.body, owner: req.currentUser._id }
+    const newReview = { ...req.body, owner: req.currentUser }
     city.review.push(newReview)
     await city.save()
     return res.status(200).json(city)

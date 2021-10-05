@@ -10,13 +10,6 @@ const userSchema = new mongoose.Schema({
 })
 
 
-userSchema.virtual('createdCities', {
-  ref: 'Teams',
-  localField: '_id',
-  foreignField: 'owner'
-})
-
-
 userSchema.set('toJSON', {
   virtuals: true,
   transform(_doc, json){

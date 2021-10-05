@@ -101,10 +101,10 @@ const CityCard = () => {
                 {city.review.map(c => {
                   return (
                     <div className="review-post" key={c._id}>
-                      <p>Posted By: {c.owner}</p>
+                      <p>Posted By: {c.owner.username}</p>
                       <p className="text-post">{c.text}</p>
                       <p>Rating: {c.rating}</p>
-                      <p>Posted At: {c.createdAt}</p>
+                      <p>Posted At: {c.createdAt.toLocaleString()}</p>
                       {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
                       }

@@ -1,13 +1,31 @@
 import React, { useRef, useEffect, useState } from 'react'
-import mapboxgl from '!mapbox-gl'
+import axios from 'axios'
+import mapboxgl, { Marker } from '!mapbox-gl'
 
 const Map = () => {
+
+  const [ cities, setCities ] = useState([])
+
+  useEffect(() => {
+    const getCities = async () => {
+      try {
+        const { data } = await axios('/api/cities')
+        setCities(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getCities()
+  }, [])
+
+  
+
   mapboxgl.accessToken = 'pk.eyJ1IjoiY3V0ZS1jdWJlcyIsImEiOiJja3VkMDhoZ2UwcDk5MnhtdG15M290endsIn0.BtQbQm2o3qjqcDmQgx0urw'
   const mapContainer = useRef(null)
   const map = useRef(null)
-  const [lng, setLng] = useState(-4.5596)
-  const [lat, setLat] = useState(53.8987)
-  const [zoom, setZoom] = useState(5.87)
+  const [lng, setLng] = useState(-3.7955)
+  const [lat, setLat] = useState(54.5077)
+  const [zoom, setZoom] = useState(4.88)
 
   useEffect(() => {
     if (map.current) return // initialize map only once
@@ -18,6 +36,8 @@ const Map = () => {
       zoom: zoom,
     })
   })
+
+  
 
   useEffect(() => {
     if (!map.current) return // wait for map to initialize
@@ -34,7 +54,7 @@ const Map = () => {
       <div className="sidebar">
         Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
       </div>
-      <div ref={mapContainer} className="map-container" />
+      <div ref={mapContainer} className="map-container"/>
     </div>
   )
 }
