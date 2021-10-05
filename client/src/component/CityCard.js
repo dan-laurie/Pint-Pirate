@@ -99,14 +99,13 @@ const CityCard = () => {
             {city.review.length > 0 ?
               <><h2>Reviews</h2><div className="div d-flex flex-wrap">
                 {city.review.map(c => {
-                  const time = c.createdAt
-                  
+                  const time = new Date(c.createdAt)
                   return (
                     <div className="review-post" key={c._id}>
-                      <p>Posted By: {c.owner}</p>
-                      <p className="text-post">{c.text}</p>
-                      <p>Rating: {c.rating}</p>
-                      <p>Posted At: {c.createdAt}</p>
+                      <p>👤 : {c.username}</p>
+                      <p className="text-post">📝 : {c.text}</p>
+                      <p>📈 : {c.rating}</p>
+                      <p>📬 : {time.toLocaleString()}</p>
                       {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
                       }
