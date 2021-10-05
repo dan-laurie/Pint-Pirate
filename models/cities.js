@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 const reviewSchema = new mongoose.Schema({
   text: { type: String, required: true, maxlength: 300 },
   rating: { type: Number, required: true, min: 1, max: 10 },
-  owner: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
+  owner: { type: String, ref: 'User', required: true }
 },
 {
   timestamps: true
