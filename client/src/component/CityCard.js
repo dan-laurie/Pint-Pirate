@@ -104,7 +104,7 @@ const CityCard = () => {
                       <p>Posted By: {c.owner.username}</p>
                       <p className="text-post">{c.text}</p>
                       <p>Rating: {c.rating}</p>
-                      <p>Posted At: {c.createdAt.toLocaleString()}</p>
+                      <p>Posted At: {c.createdAt.toLocalString()}</p>
                       {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
                       }
