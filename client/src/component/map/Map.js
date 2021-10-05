@@ -50,11 +50,18 @@ const Map = () => {
   )
 
   return (
-    <div className="beer-page d-flex flex-column align-items-center justify-content-center">
-      <div className="sidebar">
-        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+    <div className="site-wrapper1">
+      <div className="beer-page d-flex flex-column align-items-center">
+        <div className="map-title">
+          <h1>Discover Pubs 🔎</h1>
+        </div>
+        <div className="map-box d-flex flex-column align-items-center justify-content-center">
+          <div className="sidebar">
+            Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+          </div>
+          <div ref={mapContainer} className="map-container"/>
+        </div>
       </div>
-      <div ref={mapContainer} className="map-container"/>
     </div>
   )
 }

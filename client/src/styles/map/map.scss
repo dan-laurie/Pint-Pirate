@@ -1,3 +1,17 @@
+.map-page {
+  height: calc(100vh - 141px);
+}
+
+.map-title {
+  h1 {
+    font-size: 100px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-family: "Permanent Marker", cursive;
+  }
+}
+
 .map-container {
   height: 600px;
   width: 600px;
@@ -8,8 +22,13 @@
   margin: 0 auto;
   width: 600px;
   background-color: rgba(193, 129, 11);
-  color: white;
+  color: $fontcolor;
   border-radius: 10px;
   padding: 10px;
   text-align: center;
+}
+
+.map-box {
+  position: relative;
+  // bottom: 120px;
 }

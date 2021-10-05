@@ -30,17 +30,20 @@ const Navbar = () => {
           </div>
           {/* Nav Bar */}
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/about">About</Link>
-            </li>
+
             { 
               userIsAuthenticated() ?
                 <>
+
+                  <li className="nav-item">
+                    <Link to="/cities">City List</Link>
+                  </li>
+
                   <li className="nav-item">
                     <Link to="/map">Map</Link>
                   </li>
                   <li className="nav-item">
-                    <Link to="/cities">City List</Link>
+                    <Link to="/about">About</Link>
                   </li>
                   <li className="nav-item">
                     <span className="logout"onClick={handleLogout}>Logout</span>
@@ -54,6 +57,9 @@ const Navbar = () => {
                   </li>
                   <li className="nav-item">
                     <Link to="/register">Register</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/about">About</Link>
                   </li>
                 </>
             }
