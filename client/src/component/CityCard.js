@@ -1,7 +1,7 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useParams, useHistory } from 'react-router-dom'
-import { getTokenFromLocalStorage } from './helpers/auth'
+import { getTokenFromLocalStorage, getPayload } from './helpers/auth'
 
 const CityCard = () => {
   const [city, setCity] = useState(null)
@@ -44,6 +44,12 @@ const CityCard = () => {
     } catch (err) {
       console.log(err)
     }
+  }
+
+  const userIsOwner = (ownerId) => {
+    const payload = getPayload()
+    if (!payload) return
+    return ownerId === payload.sub
   }
 
   // useEffect(() => {
@@ -99,7 +105,9 @@ const CityCard = () => {
                       <p className="text-post">{c.text}</p>
                       <p>Rating: {c.rating}</p>
                       <p>Posted At: {c.createdAt}</p>
+                      {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
+                      }
                     </div>
                   )
                 })}

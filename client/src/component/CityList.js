@@ -44,6 +44,8 @@ const CityList = () => {
     }
   }
 
+
+
   return (
     <div className="beer-page">
       <h2>City List</h2>

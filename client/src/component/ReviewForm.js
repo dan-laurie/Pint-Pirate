@@ -49,6 +49,9 @@ const ReviewForm = () => {
   return (
     <div className="site-wrapper">
       <div className='review-page'>
+        <Link to={`/cities/${id}`}>
+          <h4 className='list-link'>Back to City</h4>
+        </Link>
         <div className="form-page">
           <div className="container">
             <div className="row">

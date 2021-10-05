@@ -59,7 +59,7 @@ export default [
       name: 'Carlsberg Export',
       price: 3.25,
       abv: 4.8,
-      image: 'https://i.imgur.com/Qy4h9DY.png',
+      image: 'https://i.imgur.com/qRdQCUb.png',
       bio: 'Carlsberg Export is a premium-strength lager, with a refined and satisfying taste. Brewed to the original Danish recipe, it has deep malty notes and a distinct bitterness that generate a full-flavoured lager that is stronger in taste and mouth-feel than our standard Pilsner.',
       locations: ['The Criterion', 'The Super Mare', 'The George and Dragon Pub']
     }
@@ -163,7 +163,7 @@ export default [
       name: 'Sam Smiths',
       price: 3.56,
       abv: 4.5,
-      image: 'https://i.imgur.com/l7DGynl.png',
+      image: 'https://i.imgur.com/KYGrh3I.png',
       bio: 'Brewed with well water, best barley malt, yeast and aromatic hops; fermented in \'stone Yorkshire squares\' to create a full, rounded flavour and after-taste.',
       locations: ['Samuel Smiths Pubs']
     }
@@ -267,7 +267,7 @@ export default [
       name: 'Tennents',
       price: 2.10,
       abv: 4.0,
-      image: 'https://i.imgur.com/IKHmXHq.png',
+      image: 'https://i.imgur.com/P7hWpGZ.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['Tennents Bar', 'Drum & Monkey', 'Curlers Rest']
     }
@@ -280,7 +280,7 @@ export default [
       name: 'Tennents',
       price: 3.10,
       abv: 4.0,
-      image: 'https://i.imgur.com/IKHmXHq.png',
+      image: 'https://i.imgur.com/P7hWpGZ.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['The Worlds End', 'Bennets Bar', 'The Bow Bar']
     }
@@ -293,7 +293,7 @@ export default [
       name: 'Tennents',
       price: 2.70,
       abv: 4.0,
-      image: 'https://i.imgur.com/IKHmXHq.png',
+      image: 'https://i.imgur.com/P7hWpGZ.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['Trades House', 'Dukes Corner', 'The Phoenix']
     }
@@ -319,7 +319,7 @@ export default [
       name: 'Tennents',
       price: 2.60,
       abv: 4.0, 
-      image: 'https://i.imgur.com/IKHmXHq.png',
+      image: 'https://i.imgur.com/P7hWpGZ.png',
       bio: 'Tennents Lager is brewed to meticulously high standards, using exceptional ingredients and characterised by its clean taste and refreshingly crisp finish best served ice cold. Having maintained its popularity in the face of changing tastes and fashions, Tennent Lager has also earned widespread acclaim for its staunch commitment to football and music in Scotland.',
       locations: ['The Stag', 'Ma Camerons', 'Prince of Wales']
     }
@@ -345,7 +345,7 @@ export default [
       name: 'Grolsch Premium Pilsner',
       price: 3.30,
       abv: 4.0,
-      image: 'https://i.imgur.com/N4OC2ZC.png',
+      image: 'https://i.imgur.com/O5z7yls.png',
       bio: 'Grolsch has been brewed in the Netherlands for 400 years. Our Pilsner is brewed for refreshment and greater depth of flavour. Perfectly blending malted barley and 2 hops - one for aroma, one for bitterness - creates our famous taste',
       locations: ['The Kings Arms', 'The Cricketers']
     }
@@ -371,7 +371,7 @@ export default [
       name: 'Stella',
       price: 3.40,
       abv: 5.0,
-      image: 'https://i.imgur.com/mG466Qu.png',
+      image: 'https://i.imgur.com/rVx5T35.png',
       bio: 'True to the time-honored recipe, Stella Artois is crafted with three ingredients–saaz hops, malted barley, and water. It has a wonderful hop aroma, well-balanced malt sweetness, crisp hop bitterness and a soft dry finish. It is the perfect beer to enjoy with food and friends.',
       locations: ['Alberrys', 'Bishops Finger', 'The Monument']
     }
@@ -540,7 +540,7 @@ export default [
       name: 'Grolsch Premium Pilsner',
       price: 3.30,
       abv: 4.0,
-      image: 'https://i.imgur.com/N4OC2ZC.png',
+      image: 'https://i.imgur.com/O5z7yls.png',
       bio: 'Grolsch has been brewed in the Netherlands for 400 years. Our Pilsner is brewed for refreshment and greater depth of flavour. Perfectly blending malted barley and 2 hops - one for aroma, one for bitterness - creates our famous taste',
       locations: ['The Old Walnut Tree', 'The Oakwood', 'Guildford Southend']
     }
@@ -553,7 +553,7 @@ export default [
       name: 'Stella',
       price: 2.50,
       abv: 5.0,
-      image: 'https://i.imgur.com/mG466Qu.png',
+      image: 'https://i.imgur.com/rVx5T35.png',
       bio: 'True to the time-honored recipe, Stella Artois is crafted with three ingredients–saaz hops, malted barley, and water. It has a wonderful hop aroma, well-balanced malt sweetness, crisp hop bitterness and a soft dry finish. It is the perfect beer to enjoy with food and friends.',
       locations: ['Seven Red Roses', 'Bull & Chequers', ' The Water Tower']
     }
