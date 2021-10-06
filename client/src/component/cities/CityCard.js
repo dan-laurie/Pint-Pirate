@@ -95,6 +95,8 @@ const CityCard = () => {
             </div>
           </div>
           <div className="review d-flex flex-column align-items-center flex-wrap">
+            {/* {city.review.length > 0 ?
+              <><h2 className>Reviews - Average User Rating: {city.avgRating}</h2> */}
             {city.review.length > 0 ?
               <><h2>Reviews ✍️</h2>
                 <h3>Average User Rating: <span className={ratingColor()}>{city.avgRating}</span></h3>
