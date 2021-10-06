@@ -99,16 +99,16 @@ const CityCard = () => {
               <><h2 className>Reviews - Average User Rating: {city.avgRating}</h2> */}
             {city.review.length > 0 ?
               <><h2>Reviews ✍️</h2>
-                <h3>Average User Rating: <span className={ratingColor()}>{city.avgRating}</span></h3>
+                <h3>Average User Rating <span className={ratingColor()}> {city.avgRating}</span></h3>
                 <div className="div review-box d-flex flex-wrap justify-content-center">
                   {city.review.map(c => {
                     const time = new Date(c.createdAt)
                     return (
                       <div className="review-post" key={c._id}>
-                        <p>👤 : {c.username}</p>
-                        <p className="text-post">📝 : {c.text}</p>
-                        <p>📈 : {c.rating}</p>
-                        <p>📬 : {time.toLocaleString()}</p>
+                        <p>👤  {c.username}</p>
+                        <p className="text-post">📝  {c.text}</p>
+                        <p>📈  {c.rating}</p>
+                        <p>📬  {time.toLocaleString()}</p>
                         {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
                         }
