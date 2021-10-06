@@ -13,7 +13,6 @@ import Footer from './component/common/Footer'
 import Profile from './component/profile/Profile'
 
 function App() {
-
   return (
     <BrowserRouter>
       <Navbar />
