@@ -1,14 +1,13 @@
-*{
-  font-family: 'Montserrat', sans-serif;
+* {
+  font-family: "Montserrat", sans-serif;
 }
-@import './common/variables.scss';
-@import './common/navbar.scss';
-@import './common/home.scss';
-@import './cities/citylist.scss';
-@import './auth/auth.scss';
-@import './cities/citycard.scss';
-@import './about/about.scss';
-@import './map/map.scss';
-@import './common/footer.scss';
-
-
+@import "./common/variables.scss";
+@import "./common/navbar.scss";
+@import "./common/home.scss";
+@import "./cities/citylist.scss";
+@import "./auth/auth.scss";
+@import "./cities/citycard.scss";
+@import "./about/about.scss";
+@import "./map/map.scss";
+@import "./profile/profile.scss";
+@import "./common/footer.scss";
