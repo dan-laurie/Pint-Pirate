@@ -96,8 +96,8 @@ const CityCard = () => {
             </div>
           </div>
           <div className="review d-flex flex-column align-items-center flex-wrap">
-            {city.review.length > 0 ?
-              <><h2>Reviews - Average User Rating: {city.avgRating}</h2>
+            {city.review.length > 0 && city.avgRating > 0 && city.avgRating < 5 ?
+              <><h2 className>Reviews - Average User Rating: {city.avgRating}</h2>
                 <div className="div review-box d-flex flex-wrap justify-content-center">
                   {city.review.map(c => {
                     const time = new Date(c.createdAt)
