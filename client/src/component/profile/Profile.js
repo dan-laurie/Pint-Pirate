@@ -33,7 +33,7 @@ const Profile = () => {
         <h1>My Profile</h1>
         <div className="details">
           <div className="profile-pic">
-            {/* <img src={details} alt="" /> */}
+            <img src={details.image} alt="" />
           </div>
           <h3>Username: {details.username}</h3>
           <h3>Email: {details.email}</h3>
