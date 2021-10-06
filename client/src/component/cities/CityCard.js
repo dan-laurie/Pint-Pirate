@@ -1,20 +1,16 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useParams, useHistory } from 'react-router-dom'
-import { getTokenFromLocalStorage, getPayload } from './helpers/auth'
+import { getTokenFromLocalStorage, getPayload } from '../helpers/auth'
 
 const CityCard = () => {
   const [city, setCity] = useState(null)
   const [hasError, setHasError] = useState(false)
-  // const [ deleteReview, setDeleteReview ] = useState([])
-  // const [ updateState, setUpdateState ] = React.useState()
-  // const forceUpdate = React.useCallback(() => setUpdateState({}), [])
+
   const { id } = useParams()
 
   const history = useHistory()
   const token = getTokenFromLocalStorage() 
-  // const revId = city.review._id
-
   
 
   useEffect(() => {
@@ -32,7 +28,6 @@ const CityCard = () => {
   },[id])
 
   const handleDelete = async (e) => {
-    // e.preventDefault()
     const remove = e.target.name
     try {
       await axios.delete(`/api/cities/${id}/reviews/${e.target.name}`,{
@@ -52,10 +47,16 @@ const CityCard = () => {
     return ownerId === payload.sub
   }
 
-  // useEffect(() => {
-    
-  // }, [deleteReview])
-
+  const ratingColor = (rating) => {
+    if (city.avgRating >= 0 && city.avgRating < 5) {
+      rating = 'red-color'
+    } else if (city.avgRating >= 5 && city.avgRating < 7.5) {
+      rating = 'amber-color'
+    } else {
+      rating = 'green-color'
+    }
+    return rating
+  } 
 
   return (
     <div className="beer-page"> 
@@ -66,10 +67,8 @@ const CityCard = () => {
       </div>
       {city ?
         <><div className="container-city">
-          <div className="city-info d-flex flex-columm">
+          <div className="city-info d-flex flex-column">
             <h2>{city.name}</h2>
-            {/* <div className="city-bio">
-            </div> */}
             <div className="city-image-single">
               <img className="city-pic" src={city.image} alt={city.name}></img>
             </div>
@@ -97,7 +96,8 @@ const CityCard = () => {
           </div>
           <div className="review d-flex flex-column align-items-center flex-wrap">
             {city.review.length > 0 ?
-              <><h2>Reviews - Average User Rating: {city.avgRating}</h2>
+              <><h2>Reviews ✍️</h2>
+                <h3>Average User Rating: <span className={ratingColor()}>{city.avgRating}</span></h3>
                 <div className="div review-box d-flex flex-wrap justify-content-center">
                   {city.review.map(c => {
                     const time = new Date(c.createdAt)
@@ -117,8 +117,6 @@ const CityCard = () => {
               :
               <h2></h2>
             }
-            
-            
           </div>
         </div>
         </>
@@ -131,7 +129,6 @@ const CityCard = () => {
           }
         </>
       }
-      
     </div>
     
   )

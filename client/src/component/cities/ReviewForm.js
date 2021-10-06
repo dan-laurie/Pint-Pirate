@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Select from 'react-select'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
-import { getTokenFromLocalStorage } from './helpers/auth'
+import { getTokenFromLocalStorage } from '../helpers/auth'
 
 const ReviewForm = () => {
 

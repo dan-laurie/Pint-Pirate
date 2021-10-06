@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
-import { getPayload, userIsAuthenticated } from './helpers/auth'
+import { getPayload, userIsAuthenticated } from '../helpers/auth'
 
 const Navbar = () => {
 
@@ -44,6 +44,9 @@ const Navbar = () => {
                   </li>
                   <li className="nav-item">
                     <Link to="/about">About</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link to="/profile">My Profile</Link>
                   </li>
                   <li className="nav-item">
                     <span className="logout"onClick={handleLogout}>Logout</span>

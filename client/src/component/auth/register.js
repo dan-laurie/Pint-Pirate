@@ -1,6 +1,7 @@
 import React, { useState } from 'react' 
 import { useHistory } from 'react-router-dom'
 import axios from 'axios'
+import ImageUpload from '../profile/ImageUpload'
 
 
 const Register = () => {
@@ -15,6 +16,7 @@ const Register = () => {
     email: '',
     password: '',
     passwordConfirmation: '',
+    image: '',
   })
 
 
@@ -25,6 +27,7 @@ const Register = () => {
     email: '',
     password: '',
     passwordConfirmation: '',
+    image: '',
   })
 
   //here we are updating the state of the form in order to POST this info to API
@@ -45,6 +48,10 @@ const Register = () => {
       setErrors(err.response.data.errors)
       console.log(errors) //tells us what is wrong/missing, displayed to user in JSX
     }
+  }
+
+  const handleImageUrl = (url) => {
+    setFormData({ ...formData, image: url })
   }
 
   return (
@@ -74,6 +81,13 @@ const Register = () => {
                   <label htmlFor="passwordConfirmation">Password Confirmation</label>
                   <input onInput={handleChange}type="password" name="passwordConfirmation" placeholder="Password Confirmation" value={formData.passwordConfirmation}/>
                   {errors.passwordConfirmation && <p className="error">{errors.passwordConfirmation.message}</p>}
+                </div>
+                <div className="form-field">
+                  <ImageUpload 
+                    value={formData.image}
+                    name='image'
+                    handleImageUrl={handleImageUrl}
+                  />
                 </div>
                 <button className="btn btn-yellow w-100">Register</button>
               </form>
