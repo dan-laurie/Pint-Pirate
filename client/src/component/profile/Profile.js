@@ -26,19 +26,28 @@ const Profile = () => {
   
   }, [token])
 
+  const getImage = () => {
+    if (!details.image) {
+      return 'https://i.imgur.com/hmWvp9e.jpg'
+    } else {
+      return details.image
+    }
+  }
+
 
   return (
     <div className="site-wrapper">
       <div className="beer-page">
-        <h1>My Profile</h1>
-        <div className="details">
+        <h1 className='profile-title'>My Profile</h1>
+        <div className="details d-flex justify-content-center">
           <div className="profile-pic">
-            <img src={details.image} alt="" />
+            <img src={getImage()} alt="" />
           </div>
-          <h3>Username: {details.username}</h3>
-          <h3>Email: {details.email}</h3>
+          <div className='profile-info d-flex flex-column justify-content-center'>
+            <h3>👤 : {details.username}</h3>
+            <h3>📧 : {details.email}</h3>
+          </div>
         </div>
-
       </div>
     
     </div>
