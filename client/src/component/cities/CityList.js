@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-import Search from './Search'
-import { userIsAuthenticated } from './helpers/auth'
+import Search from '../helpers/Search'
+import { userIsAuthenticated } from '../helpers/auth'
 
 const CityList = () => {
   const [ cities, setCities ] = useState([])

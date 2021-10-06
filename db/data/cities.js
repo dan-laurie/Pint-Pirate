@@ -79,7 +79,7 @@ export default [
   },
   {
     name: 'Bournemouth',
-    bio: 'Bournemouth, seaside resort town and unitary authority, geographic county of Dorset, historic county of Hampshire, southern England. It is located on the English Channel just west of Christchurch. Becoming a more of a student town town over the last couple of years due to the uni.',
+    bio: 'Bournemouth, seaside resort town and unitary authority, geographic county of Dorset, historic county of Hampshire, southern England. It is located on the English Channel just west of Christchurch. Becoming a more of a student town over the last couple of years due to the uni.',
     image: 'https://i.imgur.com/EC0cwr1.jpg',
     pint: {
       name: 'Headlander Bitter',
