@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, BrowserRouter, Route, Switch } from 'react-router-dom'
+import dotenv from 'dotenv'
+dotenv.config()
 import Home from './component/home/Home'
 import Navbar from './component/common/Navbar'
 import CityList from './component/cities/CityList'
@@ -13,6 +15,8 @@ import Footer from './component/common/Footer'
 import Profile from './component/profile/Profile'
 
 function App() {
+  
+  
 
   return (
     <BrowserRouter>
