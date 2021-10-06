@@ -1,69 +1,78 @@
-import React, { useRef, useEffect, useState } from 'react'
-import axios from 'axios'
-import mapboxgl, { Marker } from '!mapbox-gl'
+import 'mapbox-gl/dist/mapbox-gl.css'
+import 'react-map-gl-geocoder/dist/mapbox-gl-geocoder.css'
+import React, { useRef, useState } from 'react'
+import MapGL from 'react-map-gl'
+import DeckGL, { GeoJsonLayer } from 'deck.gl'
+import Geocoder from 'react-map-gl-geocoder'
 
-const Map = () => {
+const token = process.env.REACT_APP_MAPBOX_TOKEN
 
-  const [ cities, setCities ] = useState([])
-
-  useEffect(() => {
-    const getCities = async () => {
-      try {
-        const { data } = await axios('/api/cities')
-        setCities(data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getCities()
-  }, [])
-
-  
-
-  mapboxgl.accessToken = 'pk.eyJ1IjoiY3V0ZS1jdWJlcyIsImEiOiJja3VkMDhoZ2UwcDk5MnhtdG15M290endsIn0.BtQbQm2o3qjqcDmQgx0urw'
-  const mapContainer = useRef(null)
-  const map = useRef(null)
-  const [lng, setLng] = useState(-3.7955)
-  const [lat, setLat] = useState(54.5077)
-  const [zoom, setZoom] = useState(4.88)
-
-  useEffect(() => {
-    if (map.current) return // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      style: 'mapbox://styles/mapbox/streets-v11',
-      center: [lng, lat],
-      zoom: zoom,
-    })
+const SearchableMap = () => {
+  const [ viewport, setViewPort] = useState({
+    latitude: 54.6130,
+    longitude: -4.1971,
+    zoom: 4.64,
+    transitionDuration: 100,
   })
+  const [searchResultLayer, setSearchResult ] = useState(null)
 
-  
+  const mapRef = useRef()
 
-  useEffect(() => {
-    if (!map.current) return // wait for map to initialize
-    map.current.on('move', () => {
-      setLng(map.current.getCenter().lng.toFixed(4))
-      setLat(map.current.getCenter().lat.toFixed(4))
-      setZoom(map.current.getZoom().toFixed(2))
+  const handleOnResult = (e) => {
+    console.log(e.result)
+    setSearchResult( new GeoJsonLayer({
+      id: 'search-result',
+      data: e.result.geometry,
+      getFillColor: [255, 0, 0, 128],
+      getRadius: 1000,
+      pointRadiusMinPixels: 10,
+      pointRadiusMaxPixels: 10,
+    })
+    )
+  }
+
+  const handleGeocoderViewportChange = (viewport) => {
+    const geocoderDefaultOverrides = { transitionDuration: 1000 }
+    console.log('Updating')
+    return setViewPort({
+      ...viewport,
+      ...geocoderDefaultOverrides,
     })
   }
-  )
 
   return (
     <div className="site-wrapper1">
       <div className="beer-page d-flex flex-column align-items-center">
-        <div className="map-title">
-          <h1>Discover Pubs 🔎</h1>
-        </div>
-        <div className="map-box d-flex flex-column align-items-center justify-content-center">
-          <div className="sidebar">
-            Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+        <div className="map-page">
+          <div className="map-title">
+            <h1>Discover Pubs 🔎</h1>
           </div>
-          <div ref={mapContainer} className="map-container"/>
+          <div className="sidebar">
+            Longitude: {viewport.longitude.toFixed(4)} | Latitude: {viewport.latitude.toFixed(4)} | Zoom: {viewport.zoom.toFixed(2)}
+          </div>
+          <div className="map-container">
+            <MapGL 
+              ref={mapRef}
+              {...viewport}
+              mapStyle="mapbox://styles/mapbox/streets-v11"
+              width="100%"
+              height="90%"
+              onViewportChange={setViewPort}
+              mapboxApiAccessToken={token}
+            >
+              <Geocoder 
+                mapRef={mapRef}
+                onResult={handleOnResult}
+                onViewportChange={handleGeocoderViewportChange}
+                mapboxApiAccessToken={token}
+                position='top-left'
+              />
+              <DeckGL {...viewport} layers={[searchResultLayer]} />
+            </MapGL>
+          </div>
         </div>
       </div>
     </div>
   )
 }
-
-export default Map 
+export default SearchableMap
