@@ -66,14 +66,14 @@ const CityCard = () => {
       </div>
       {city ?
         <><div className="container-city">
-          <div className="city-info d-flex">
-            <div className="city-bio">
-              <h2>{city.name}</h2>
-              <p>{city.bio}</p>
+          <div className="city-info d-flex flex-columm">
+            <h2>{city.name}</h2>
+            {/* <div className="city-bio">
+            </div> */}
+            <div className="city-image-single">
+              <img className="city-pic" src={city.image} alt={city.name}></img>
             </div>
-            <div className="city-image-single d-flex">
-              <img className="city-pic" src={city.image} alt={city.name} />
-            </div>
+            <p>{city.bio}</p>
           </div>
           <div className="beers-side d-flex justify-content-center">
             <div className="beer-pic">
