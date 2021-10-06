@@ -1,5 +1,5 @@
 import React from 'react'
-import { imageUrl, imagePreset } from '../environment/environment'
+import 'dotenv/config'
 import axios from 'axios'
 
 const ImageUpload = ({ name, handleImageUrl }) => {

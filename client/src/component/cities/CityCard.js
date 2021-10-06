@@ -95,14 +95,11 @@ const CityCard = () => {
             </div>
           </div>
           <div className="review d-flex flex-column align-items-center flex-wrap">
-<<<<<<< HEAD:client/src/component/CityCard.js
-            {city.review.length > 0 && city.avgRating > 0 && city.avgRating < 5 ?
-              <><h2 className>Reviews - Average User Rating: {city.avgRating}</h2>
-=======
+            {/* {city.review.length > 0 ?
+              <><h2 className>Reviews - Average User Rating: {city.avgRating}</h2> */}
             {city.review.length > 0 ?
               <><h2>Reviews ✍️</h2>
                 <h3>Average User Rating: <span className={ratingColor()}>{city.avgRating}</span></h3>
->>>>>>> 0c7019be74398d3a59aeb82fc4000809644b7183:client/src/component/cities/CityCard.js
                 <div className="div review-box d-flex flex-wrap justify-content-center">
                   {city.review.map(c => {
                     const time = new Date(c.createdAt)
