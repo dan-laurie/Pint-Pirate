@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link, useParams } from 'react-router-dom'
 import { getTokenFromLocalStorage, getPayload } from '../helpers/auth'
 import { Helmet } from 'react-helmet'
+import gif from '../../assets/beerfail.gif'
 
 const CityCard = () => {
   const [city, setCity] = useState(null)
@@ -107,10 +108,10 @@ const CityCard = () => {
                       const time = new Date(c.createdAt)
                       return (
                         <div className="review-post" key={c._id}>
-                          <p>👤  {c.username}</p>
-                          <p className="text-post">📝  {c.text}</p>
-                          <p>📈  {c.rating}</p>
-                          <p>📬  {time.toLocaleString()}</p>
+                          <p>👤 - {c.username}</p>
+                          <p className="text-post">📝 - {c.text}</p>
+                          <p>📈 - {c.rating}</p>
+                          <p>📬 - {time.toLocaleString()}</p>
                           {userIsOwner(c.owner) && 
                       <button className='delete-button' onClick={handleDelete} name={c._id}>❌</button>
                           }
@@ -127,9 +128,21 @@ const CityCard = () => {
         :
         <>
           {hasError ? 
-            <h2>Something Went Wrong</h2> 
+            <>
+              <h2 className="error-heading">Something Went Wrong</h2> 
+              <div className="d-flex align-content-center">
+                <img className="fail-gif" src={gif}/>
+              </div>
+              <div className="d-flex justify-content-center">
+                <Link to={'/'}>
+                  <h4 className='error-btn'>Take me Home!</h4>
+                </Link>
+              </div>
+            </>
             :
-            <h2>Loading</h2>
+            <>
+              <h2>Loading</h2>
+            </>
           }
         </>
       }
