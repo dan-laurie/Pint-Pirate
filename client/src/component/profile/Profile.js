@@ -54,8 +54,8 @@ const Profile = () => {
                 <img src={getImage()} alt="" />
               </div>
               <div className='profile-info d-flex flex-column justify-content-center'>
-                <h3>👤: {details.username}</h3>
-                <h3>📧: {details.email}</h3>
+                <h3>👤 {details.username}</h3>
+                <h3>📧 {details.email}</h3>
               </div>
             </div>
           </>
