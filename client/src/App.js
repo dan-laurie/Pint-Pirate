@@ -45,7 +45,9 @@ function App() {
           <Map exact path='/map'/>
         </Route>
       </Switch>
-      <Footer />
+      <div className="footer-div">
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }
