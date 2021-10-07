@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios' 
 import { Link, useHistory } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const Login = () => {
 
@@ -32,12 +33,17 @@ const Login = () => {
   }
 
   return (
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | Login 📝</title>
+      </Helmet>
+    </div>
     <div className="site-wrapper">
       <div className="login-page">
         <div className="form-page">
           <div className="container">
             <div className="row">
-              <form  onSubmit={handleSubmit} className="col-10 offset-1 mt-4 col-md-6 offset-md-3">
+              <form onSubmit={handleSubmit} className="col-10 offset-1 mt-4 col-md-6 offset-md-3">
                 <h3>Login</h3>
                 <div className="form-field">
                   <label htmlFor="email">Email</label>
@@ -48,13 +54,13 @@ const Login = () => {
                   <input onChange={handleChange} type="password" name="password" placeholder="Password" />
                 </div>
                 <button className="btn btn-yellow w-100">Login</button>
-                <p className="no-account">Don&apos;t have an Account? <Link to="/register"><span>Click Here</span></Link></p>
+                <p className="no-account">Don&apos; t have an Account?<Link to="/register"><span>Click Here</span></Link></p>
               </form>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   )
 }
 
