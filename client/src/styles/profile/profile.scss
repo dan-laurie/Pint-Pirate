@@ -9,22 +9,23 @@
   }
   .profile-pic {
     img {
-    border-radius: 50%;
-    height: 450px;
-    width: 450px;
-    object-fit: cover;
-    object-position: top;
+      border-radius: 50%;
+      height: 450px;
+      width: 450px;
+      object-fit: cover;
+      object-position: top;
     }
   }
-  .profile-info{
+  .profile-info {
     margin-left: 15px;
   }
 }
 
 .profile-title {
   text-align: center;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   font-size: 120px;
   position: relative;
   top: 10px;
+  color: $fontcolor;
 }

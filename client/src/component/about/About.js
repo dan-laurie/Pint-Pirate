@@ -1,13 +1,19 @@
 import React from 'react' 
+import { Helmet } from 'react-helmet'
 
 const About = () => {
   return (
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | About 📖</title>
+      </Helmet>
+    </div>
     <div className="site-wrapper1">
       <div className="about-page">
         <div className="about-info d-flex flex-column">
           <h1>About</h1>
           <p>Welcome to Pint Pirate! <br /> A project created during General Assembly&apos;s SEI by Dan, Wala and Kwasi.<br />
-        A simple easy to use web application to find the cheapest pint in all major UK cities. <br />Simply share your drinking expriences at different cities!
+              A simple easy to use web application to find the cheapest pint in all major UK cities.<br />Simply share your drinking expriences at different cities!
           </p>
           <div className="tech">
             <h3>Technologies Used</h3>
@@ -45,9 +51,9 @@ const About = () => {
               <a href="https://github.com/Kwasiiii" rel="noreferrer" target="_blank"><i className="fab fa-github"></i></a>
             </div>
           </div>
-        </div>    
+        </div>
       </div>
-    </div>
+    </div></>
   )
 }
 export default About

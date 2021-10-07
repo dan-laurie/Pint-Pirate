@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import Search from '../helpers/Search'
 import { userIsAuthenticated } from '../helpers/auth'
+import { Helmet } from 'react-helmet'
 
 const CityList = () => {
   const [ cities, setCities ] = useState([])
@@ -45,6 +46,11 @@ const CityList = () => {
   }
 
   return (
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | City List 🌍 </title>
+      </Helmet>
+    </div>
     <div className="beer-page">
       <h2>City List</h2>
       <div className="beer-filter">
@@ -59,28 +65,27 @@ const CityList = () => {
         {(filteredCities.length > 0 ? filteredCities : cities).map(city => {
           return (
             <div className="cities col-lg-3 mb-4 col-md-6" key={city.id}>
-              { userIsAuthenticated() ?
+              {userIsAuthenticated() ?
                 <Link className="card-link" to={`/cities/${city.id}`}>
-                  <div  className='card'> 
-                    <h4 className="city-name"value={city.name}>{city.name}</h4>
+                  <div className='card'>
+                    <h4 className="city-name" value={city.name}>{city.name}</h4>
                     <img className="city-image" src={city.image}></img>
                     <h6>£{(city.pint.price).toFixed(2)}</h6>
                   </div>
                 </Link>
                 :
                 <Link className="card-link" to={'/login'}>
-                  <div  className='card'> 
-                    <h4 className="city-name"value={city.name}>{city.name}</h4>
+                  <div className='card'>
+                    <h4 className="city-name" value={city.name}>{city.name}</h4>
                     <img className="city-image" src={city.image}></img>
                     <h6>£{(city.pint.price).toFixed(2)}</h6>
                   </div>
-                </Link>
-              }
+                </Link>}
             </div>
           )
-        })} 
+        })}
       </div>
-    </div>
+    </div></>
   )
 }
 export default CityList

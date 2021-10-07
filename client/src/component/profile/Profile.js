@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import axios from 'axios'
+import { Helmet } from 'react-helmet'
 
 const Profile = () => {
 
@@ -34,6 +35,11 @@ const Profile = () => {
   }
 
   return (
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | Profile 👤</title>
+      </Helmet>
+    </div>
     <div className="site-wrapper">
       <div className="beer-page">
         <h1 className='profile-title'>My Profile</h1>
@@ -42,12 +48,12 @@ const Profile = () => {
             <img src={getImage()} alt="" />
           </div>
           <div className='profile-info d-flex flex-column justify-content-center'>
-            <h3>👤 : {details.username}</h3>
-            <h3>📧 : {details.email}</h3>
+            <h3>👤: {details.username}</h3>
+            <h3>📧: {details.email}</h3>
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   )
 }
 

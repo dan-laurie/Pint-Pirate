@@ -4,6 +4,7 @@ import React, { useRef, useState } from 'react'
 import MapGL from 'react-map-gl'
 import DeckGL, { GeoJsonLayer } from 'deck.gl'
 import Geocoder from 'react-map-gl-geocoder'
+import { Helmet } from 'react-helmet'
 
 const token = process.env.REACT_APP_MAPBOX_TOKEN
 
@@ -41,6 +42,11 @@ const SearchableMap = () => {
   }
 
   return (
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | Map 🗺</title>
+      </Helmet>
+    </div>
     <div className="site-wrapper1">
       <div className="beer-page d-flex flex-column align-items-center">
         <div className="map-page">
@@ -51,7 +57,7 @@ const SearchableMap = () => {
             Longitude: {viewport.longitude.toFixed(4)} | Latitude: {viewport.latitude.toFixed(4)} | Zoom: {viewport.zoom.toFixed(2)}
           </div>
           <div className="map-container">
-            <MapGL 
+            <MapGL
               ref={mapRef}
               {...viewport}
               mapStyle="mapbox://styles/mapbox/streets-v11"
@@ -60,19 +66,18 @@ const SearchableMap = () => {
               onViewportChange={setViewPort}
               mapboxApiAccessToken={token}
             >
-              <Geocoder 
+              <Geocoder
                 mapRef={mapRef}
                 onResult={handleOnResult}
                 onViewportChange={handleGeocoderViewportChange}
                 mapboxApiAccessToken={token}
-                position='top-left'
-              />
+                position='top-left' />
               <DeckGL {...viewport} layers={[searchResultLayer]} />
             </MapGL>
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   )
 }
 export default SearchableMap

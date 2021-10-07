@@ -1,8 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const Home = () => {
   return ( 
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | Home 🏠</title>
+      </Helmet>
+    </div>
     <div className="site-wrapper">
       <div className="home-background">
         <div className="home-container d-flex flex-column">
@@ -17,12 +23,12 @@ const Home = () => {
                 <p>Go to Untappd for further Beer ratings and find like minded drinkers!</p>
               </div>
             </a>
-            <a href="https://www.beerhawk.co.uk/"rel="noreferrer" target="_blank">
+            <a href="https://www.beerhawk.co.uk/" rel="noreferrer" target="_blank">
               <div className="hawk-card">
                 <p>Fancy a draught at home? Check out Beer Hawk!</p>
               </div>
             </a>
-            <a href="https://puritybrewing.com/"rel="noreferrer" target="_blank">
+            <a href="https://puritybrewing.com/" rel="noreferrer" target="_blank">
               <div className="purity-card">
                 <p>For completely carbon-neutral brewing, check out Purity Brewing Co.</p>
               </div>
@@ -30,7 +36,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   )
 }
 

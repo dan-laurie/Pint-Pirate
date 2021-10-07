@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
+import { Helmet } from 'react-helmet'
 
 const ReviewForm = () => {
 
@@ -47,6 +48,11 @@ const ReviewForm = () => {
   }
 
   return (
+    <><div>
+      <Helmet>
+        <title>Pint-Pirate | Review ✍️</title>
+      </Helmet>
+    </div>
     <div className="site-wrapper">
       <div className='review-page'>
         <Link to={`/cities/${id}`}>
@@ -62,8 +68,7 @@ const ReviewForm = () => {
                     <textarea onInput={handleChange}
                       className="textarea"
                       name="text"
-                      value={formData.text}
-                    />
+                      value={formData.text} />
                   </div>
                 </div>
                 <div className="rating form-field">
@@ -94,7 +99,7 @@ const ReviewForm = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></>
   )
 }
 
