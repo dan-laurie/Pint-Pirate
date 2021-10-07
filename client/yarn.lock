@@ -6298,7 +6298,6 @@
   "version" "13.11.0"
   dependencies:
     "type-fest" "^0.20.2"
-<<<<<<< HEAD
 
 "globals@^13.9.0":
   "integrity" "sha512-08/xrJ7wQjK9kkkRoI3OFUBbLx4f+6x3SGwcPvQ0QH6goFDrOU2oyAWrmh3dJezu65buo+HBMzAMQy6rovVC3g=="
@@ -6307,16 +6306,6 @@
   dependencies:
     "type-fest" "^0.20.2"
 
-=======
-
-"globals@^13.9.0":
-  "integrity" "sha512-08/xrJ7wQjK9kkkRoI3OFUBbLx4f+6x3SGwcPvQ0QH6goFDrOU2oyAWrmh3dJezu65buo+HBMzAMQy6rovVC3g=="
-  "resolved" "https://registry.npmjs.org/globals/-/globals-13.11.0.tgz"
-  "version" "13.11.0"
-  dependencies:
-    "type-fest" "^0.20.2"
-
->>>>>>> 5e45f6595f90534e8baccd248dc9e3dd5a4639b1
 "globby@^11.0.1", "globby@^11.0.3":
   "integrity" "sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg=="
   "resolved" "https://registry.npmjs.org/globby/-/globby-11.0.4.tgz"
