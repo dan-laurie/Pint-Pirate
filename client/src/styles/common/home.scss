@@ -1,15 +1,11 @@
 .site-wrapper {
   height: calc(100vh - 141px);
-  h1,
-  h2,
   p {
     color: $fontcolor;
   }
 }
 
 .title-screen {
-  position: relative;
-  // top: calc(40% - 56px);
   margin-top: 25px;
   h1 {
     font-size: 150px;
@@ -51,7 +47,6 @@
 
 .home-cards {
   margin-top: 80px;
-  // justify-content: space-around;
   justify-content: center;
   a {
     text-decoration: none;
@@ -91,7 +86,6 @@
   margin: 0 15px;
   border-radius: 10px;
   display: flex;
-  // border: 5px solid rgb(193, 129, 11);
   box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
   p {
     font-size: 20px;
@@ -116,7 +110,6 @@
   margin: 0 15px;
   border-radius: 10px;
   display: flex;
-  // border: 5px solid rgb(193, 129, 11);
   box-shadow: 0px 2px 12px rgba(0 0 0 / 20%);
   p {
     font-size: 20px;
