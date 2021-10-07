@@ -23,7 +23,6 @@ const Profile = () => {
       }
     }
     getData()
-  
   }, [token])
 
   const getImage = () => {
@@ -33,7 +32,6 @@ const Profile = () => {
       return details.image
     }
   }
-
 
   return (
     <div className="site-wrapper">
@@ -49,7 +47,6 @@ const Profile = () => {
           </div>
         </div>
       </div>
-    
     </div>
   )
 }

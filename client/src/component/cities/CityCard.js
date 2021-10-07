@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link, useParams, useHistory } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import { getTokenFromLocalStorage, getPayload } from '../helpers/auth'
 
 const CityCard = () => {
@@ -9,10 +9,8 @@ const CityCard = () => {
 
   const { id } = useParams()
 
-  const history = useHistory()
   const token = getTokenFromLocalStorage() 
   
-
   useEffect(() => {
     const getCity = async () => {
       try {
@@ -28,7 +26,6 @@ const CityCard = () => {
   },[id])
 
   const handleDelete = async (e) => {
-    const remove = e.target.name
     try {
       await axios.delete(`/api/cities/${id}/reviews/${e.target.name}`,{
         headers: {
@@ -95,8 +92,6 @@ const CityCard = () => {
             </div>
           </div>
           <div className="review d-flex flex-column align-items-center flex-wrap">
-            {/* {city.review.length > 0 ?
-              <><h2 className>Reviews - Average User Rating: {city.avgRating}</h2> */}
             {city.review.length > 0 ?
               <><h2>Reviews ✍️</h2>
                 <h3>Average User Rating <span className={ratingColor()}> {city.avgRating}</span></h3>
@@ -132,7 +127,6 @@ const CityCard = () => {
         </>
       }
     </div>
-    
   )
 }
 

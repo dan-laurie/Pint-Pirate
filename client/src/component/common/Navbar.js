@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Link, useHistory, useLocation } from 'react-router-dom'
-import { getPayload, userIsAuthenticated } from '../helpers/auth'
+import { userIsAuthenticated } from '../helpers/auth'
 
 const Navbar = () => {
 
@@ -10,7 +10,6 @@ const Navbar = () => {
   useEffect(() => {
   }, [location.pathname])
 
-
   console.log('User is authenticated -->', userIsAuthenticated())
 
   const handleLogout = () => {
@@ -18,27 +17,20 @@ const Navbar = () => {
     history.push('/')
   }
 
-
-
   return (
     <>
       <div className="navbar navbar-expand-sm">
         <div className="container">
-          {/*Cheese Logo*/}
           <div className="navbar-brand">
             <Link to="/"><i className="fas fa-beer"></i></Link>
           </div>
-          {/* Nav Bar */}
           <ul className="navbar-nav">
-
             { 
               userIsAuthenticated() ?
                 <>
-
                   <li className="nav-item">
                     <Link to="/cities">City List</Link>
                   </li>
-
                   <li className="nav-item">
                     <Link to="/map">Map</Link>
                   </li>
@@ -51,7 +43,6 @@ const Navbar = () => {
                   <li className="nav-item">
                     <span className="logout"onClick={handleLogout}>Logout</span>
                   </li>
-
                 </>
                 :
                 <>
@@ -66,24 +57,9 @@ const Navbar = () => {
                   </li>
                 </>
             }
-
-
-            {/* <li className="nav-item">
-              <span onClick={handleLogout}>Logout</span>
-            </li> */}
           </ul>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
-
     </>
   ) 
 }

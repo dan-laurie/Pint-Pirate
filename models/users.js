@@ -2,14 +2,13 @@ import mongoose from 'mongoose'
 import bcrypt from 'bcrypt'
 import uniqueValidator from 'mongoose-unique-validator'
 
-
+//USER SCHEMA
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true, maxlength: 30 },
   email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   image: { type: String }
 })
-
 
 userSchema.set('toJSON', {
   virtuals: true,
@@ -25,9 +24,6 @@ userSchema
     this._passwordConfirmation = passwordConfirmation
   })
 
-
-
-
 userSchema 
   .pre('validate', function(next){
     if (this.isModified('password') && this.password !== this._passwordConfirmation) {
@@ -36,7 +32,6 @@ userSchema
     next()
   })
 
-
 userSchema
   .pre('save', function (next){
     if (this.isModified('password')){
@@ -44,7 +39,6 @@ userSchema
     }
     next()
   })
-
 
 userSchema.methods.validatePassword = function(password){
   return bcrypt.compareSync(password, this.password)

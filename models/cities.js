@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-//Review Schema
+//REVIEW SCHEMA
 const reviewSchema = new mongoose.Schema({
   text: { type: String, required: true, maxlength: 300 },
   rating: { type: Number, required: true, min: 1, max: 10 },
@@ -11,7 +11,7 @@ const reviewSchema = new mongoose.Schema({
   timestamps: true
 })
 
-//DEFINE CITY SCHEMA
+//CITY SCHEMA
 const citySchema = new mongoose.Schema({
   name: { type: String, required: true, unique: true },
   bio: { type: String, required: true, maxlength: 500 },
