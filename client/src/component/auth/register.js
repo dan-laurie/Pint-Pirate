@@ -3,14 +3,10 @@ import { useHistory } from 'react-router-dom'
 import axios from 'axios'
 import ImageUpload from '../profile/ImageUpload'
 
-
 const Register = () => {
 
   const history = useHistory()
-  
 
-  // State
-  //what we need to fill out to meet APIs criteria
   const [ formData, setFormData ] = useState({
     username: '',
     email: '',
@@ -19,9 +15,6 @@ const Register = () => {
     image: '',
   })
 
-
-  //this is needed so we can track what info is missing if we get 
-  //an error sent back from the API!
   const [ errors, setErrors ] = useState({
     username: '',
     email: '',
@@ -30,9 +23,6 @@ const Register = () => {
     image: '',
   })
 
-  //here we are updating the state of the form in order to POST this info to API
-  //we spread exisiting state in and simply update with the users inputs
-  //using name="" in JSX is crucial, as this can be used as the 'key'
   const handleChange = (event) => {
     const newObj = { ...formData, [event.target.name]: event.target.value }
     setFormData(newObj)
@@ -40,13 +30,13 @@ const Register = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault()
-    try {                    //using POST method as GET is DEFAULT
-      await axios.post('/api/register', formData) // second part is the form data that has been stored in state.
+    try {                 
+      await axios.post('/api/register', formData) 
       history.push('/login')
     } catch (err) {
       console.log('ERROR!', err.response.data.errors)
       setErrors(err.response.data.errors)
-      console.log(errors) //tells us what is wrong/missing, displayed to user in JSX
+      console.log(errors) 
     }
   }
 

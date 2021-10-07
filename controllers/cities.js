@@ -57,7 +57,7 @@ export const deleteCity = async (req, res) => {
   }
 }
 
-//POST 
+//POST REVIEW
 export const postReview = async (req, res) => {
   const { id } = req.params
   try {
@@ -74,6 +74,7 @@ export const postReview = async (req, res) => {
   }
 }
 
+//DELETE REVIEW
 export const deleteReview = async (req, res) => {
   const { id, reviewId } = req.params
   try {

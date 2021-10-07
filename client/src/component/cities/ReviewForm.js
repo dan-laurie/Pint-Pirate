@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Select from 'react-select'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import axios from 'axios'
 import { getTokenFromLocalStorage } from '../helpers/auth'
@@ -14,6 +13,7 @@ const ReviewForm = () => {
     rating: '',
     imageUpload: '',
   })
+
   const [ errors, setErrors ] = useState({
     text: '',
     rating: '',
@@ -55,7 +55,6 @@ const ReviewForm = () => {
         <div className="form-page">
           <div className="container">
             <div className="row">
-              
               <form className="review-form col-10 offset-1 mt-4 col-md-10 offset-md-3" onSubmit={handleSubmit}>
                 <div className="form-field">
                   <label className="review-label"><h3>Your Review</h3></label>
@@ -86,27 +85,17 @@ const ReviewForm = () => {
                   </div>
                 </div>
                 <div className="form-field">
-                  {/* <ImageUpload 
-                value={formData.profileImage}
-                name="imageUpload"
-                handleImageUrl={handleImageUrl}
-              /> */}
                 </div>
                 <div className="field">
                   <button className="button" type="submit">Submit</button>
                 </div>
               </form>
-        
             </div>
           </div>
         </div>
-        {/* <Link to={'/beers'}>
-            <h4 className='list-link'>Back to list</h4>
-          </Link> */}
       </div>
     </div>
   )
-  
 }
 
 export default ReviewForm

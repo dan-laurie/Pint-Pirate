@@ -3,13 +3,15 @@ export default [
     username: 'admin',
     email: 'admin@email.com',
     password: 'pass',
-    passwordConfirmation: 'pass'
+    passwordConfirmation: 'pass',
+    image: 'https://i.imgur.com/MKUaqGK.jpg'
   },
   {
     username: 'dan',
     email: 'dan@email.com',
     password: 'pass',
-    passwordConfirmation: 'pass'
+    passwordConfirmation: 'pass',
+    image: 'https://i.imgur.com/OdLDwHj.jpg'
   },
   {
     username: 'wala',
@@ -22,6 +24,7 @@ export default [
     username: 'kwasi',
     email: 'kwasi@email.com',
     password: 'pass',
-    passwordConfirmation: 'pass'
+    passwordConfirmation: 'pass',
+    image: 'https://i.imgur.com/aMo6pDP.jpg'
   }
 ]

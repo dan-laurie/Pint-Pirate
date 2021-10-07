@@ -12,11 +12,11 @@
   }
 }
 
-.mapboxgl-map{
+.mapboxgl-map {
   border-radius: 10px;
 }
 
-.map-container{
+.map-container {
   height: 600px;
   width: 600px;
   margin: 10px auto;
@@ -31,3 +31,6 @@
   text-align: center;
 }
 
+.mapboxgl-ctrl-geocoder--button {
+  width: fit-content;
+}

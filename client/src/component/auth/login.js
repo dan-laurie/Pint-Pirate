@@ -2,38 +2,30 @@ import React, { useState } from 'react'
 import axios from 'axios' 
 import { Link, useHistory } from 'react-router-dom'
 
-
 const Login = () => {
 
-  
+  const history = useHistory() 
 
-  //history
-  const history = useHistory() //enables us to move pages without refresh
-
-  // for login we only need email and password
   const [ formData, setFormData ] = useState({
     email: '',
     password: '',
   })
 
-  // here we are updating the state of the form in order to POST this info to API
-  // we spread exisiting state in and simply update with the users inputs
-  // using name="" in JSX is crucial, as this can be used as the 'key'
   const handleChange = (event) => {
     const newObj = { ...formData, [event.target.name]: event.target.value }
     setFormData(newObj)
   }
 
   const setTokenToLocalStorage = (token) => {
-    window.localStorage.setItem('token', token) // the token is stored in Local Storage, whoop whoop!
-    history.push('/cities') //upon successful login, we are re-directed to /cheeses
+    window.localStorage.setItem('token', token) 
+    history.push('/cities') 
   }
 
   const handleSubmit = async (event) => {
-    event.preventDefault() //stops page reloading on submit
+    event.preventDefault() 
     try {
       const { data } = await axios.post('/api/login', formData)
-      setTokenToLocalStorage(data.token) //here we dig down and get the JWT! And update that to state so it can be stored
+      setTokenToLocalStorage(data.token) 
     } catch (err) {
       console.log(err)
     }
@@ -64,7 +56,6 @@ const Login = () => {
       </div>
     </div>
   )
-  
 }
 
 export default Login
