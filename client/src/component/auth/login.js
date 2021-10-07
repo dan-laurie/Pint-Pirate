@@ -54,7 +54,7 @@ const Login = () => {
                   <input onChange={handleChange} type="password" name="password" placeholder="Password" />
                 </div>
                 <button className="btn btn-yellow w-100">Login</button>
-                <p className="no-account">Don&apos; t have an Account?<Link to="/register"><span>Click Here</span></Link></p>
+                <p className="no-account">Don&apos;t have an Account?<Link to="/register"><span> Click Here</span></Link></p>
               </form>
             </div>
           </div>

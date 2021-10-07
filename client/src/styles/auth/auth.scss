@@ -77,7 +77,6 @@ form {
   margin-top: 200px;
 }
 
-
 button {
   color: $fontcolor;
   padding: 5px 8px 5px 8px;
@@ -129,18 +128,17 @@ select {
 
 .no-account {
   margin: 0;
-  a{
-    &:hover{
+  a {
+    &:hover {
       text-decoration: none;
       color: $whitecolor;
     }
-    span{
+    span {
       color: $fontcolor;
     }
   }
 }
 
-
-// .rating {
-//   text-align: center;
-// }
+input[type="file" i] {
+  color: rgb(193, 129, 11);
+}

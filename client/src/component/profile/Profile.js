@@ -2,12 +2,15 @@ import React, { useState, useEffect } from 'react'
 import { getTokenFromLocalStorage } from '../helpers/auth'
 import axios from 'axios'
 import { Helmet } from 'react-helmet'
+import { Link } from 'react-router-dom'
+import gif from '../../assets/beerfail.gif'
 
 const Profile = () => {
 
   const token = getTokenFromLocalStorage()
 
-  const [ details, setDetails ] = useState([])
+  const [ details, setDetails ] = useState(null)
+  const [ hasError, setHasError ] = useState(false)
 
   useEffect(() => {
     const getData = async () => {
@@ -21,6 +24,7 @@ const Profile = () => {
         console.log(data)
       } catch (err) {
         console.log(err)
+        setHasError(true)
       }
     }
     getData()
@@ -42,16 +46,40 @@ const Profile = () => {
     </div>
     <div className="site-wrapper">
       <div className="beer-page">
-        <h1 className='profile-title'>My Profile</h1>
-        <div className="details d-flex justify-content-center">
-          <div className="profile-pic">
-            <img src={getImage()} alt="" />
-          </div>
-          <div className='profile-info d-flex flex-column justify-content-center'>
-            <h3>👤: {details.username}</h3>
-            <h3>📧: {details.email}</h3>
-          </div>
-        </div>
+        { details ? 
+          <>
+            <h1 className='profile-title'>My Profile</h1>
+            <div className="details d-flex justify-content-center">
+              <div className="profile-pic">
+                <img src={getImage()} alt="" />
+              </div>
+              <div className='profile-info d-flex flex-column justify-content-center'>
+                <h3>👤: {details.username}</h3>
+                <h3>📧: {details.email}</h3>
+              </div>
+            </div>
+          </>
+          :
+          <>
+            {hasError ? 
+              <>
+                <h2 className="error-heading">Something Went Wrong</h2> 
+                <div className="d-flex align-content-center">
+                  <img className="fail-gif" src={gif}/>
+                </div>
+                <div className="d-flex justify-content-center">
+                  <Link to={'/'}>
+                    <h4 className='error-btn'>Take me Home!</h4>
+                  </Link>
+                </div>
+              </>
+              :
+              <>
+                <h2>Loading</h2>
+              </>
+            }
+          </>
+        }
       </div>
     </div></>
   )
