@@ -15,7 +15,8 @@ export default [
     username: 'wala',
     email: 'wala@email.com',
     password: 'pass',
-    passwordConfirmation: 'pass'
+    passwordConfirmation: 'pass',
+    image: 'https://i.imgur.com/KBIoCQN.png'
   },
   {
     username: 'kwasi',
