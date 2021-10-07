@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { secret } from './environment.js'
+import 'dotenv/config'
 import User from '../models/users.js'
 
 export const secureRoute = async (req, res, next) => {
@@ -7,7 +7,7 @@ export const secureRoute = async (req, res, next) => {
     if (!req.headers.authorization) throw new Error('Missing headers')
 
     const token = req.headers.authorization.replace('Bearer ', '')
-    const payload = jwt.verify(token, secret)
+    const payload = jwt.verify(token, process.env.SECRET)
     const userToVerify = await User.findById(payload.sub)
 
     if (!userToVerify) throw new Error('User not found')
