@@ -19,8 +19,8 @@ const About = () => {
             <h3>Technologies Used</h3>
             <div className="bullet-list d-flex justify-content-center">
               <i className="devicon-html5-plain-wordmark colored"></i>
-              <i className="devicon-sass-original colored"></i>
               <i className="devicon-css3-plain-wordmark colored"></i>
+              <i className="devicon-sass-original colored"></i>
               <i className="devicon-bootstrap-plain-wordmark colored"></i>
               <i className="devicon-javascript-plain colored"></i>
               <i className="devicon-react-original-wordmark colored"></i>

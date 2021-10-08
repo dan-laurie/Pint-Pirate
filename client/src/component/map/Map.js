@@ -13,8 +13,8 @@ const token = process.env.REACT_APP_MAPBOX_TOKEN
 const SearchableMap = () => {
   const [ viewport, setViewPort] = useState({
     latitude: 54.6130,
-    longitude: -4.1971,
-    zoom: 4.64,
+    longitude: -5.3306,
+    zoom: 5.16,
     transitionDuration: 100,
   })
   const [searchResultLayer, setSearchResult ] = useState(null)

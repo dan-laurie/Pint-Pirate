@@ -533,7 +533,7 @@ export default [
     }
   },
   {
-    name: 'Southend-on-sea',
+    name: 'Southend-on-Sea',
     bio: 'Southend-on-Sea is a resort town on the Thames Estuary in Essex, southeast England. The long Southend Pier is serviced by a small train and has a museum at its shore end. Nearby, Adventure Island is an amusement park with fairground rides and water slides.',
     image: 'https://i.imgur.com/fWr1itT.jpg',
     pint: {

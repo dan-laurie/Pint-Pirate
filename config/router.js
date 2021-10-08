@@ -30,4 +30,5 @@ router.route('/cities/:id/reviews/:reviewId')
 router.route('/profile')
   .get(secureRoute, getProfile)
 
+
 export default router

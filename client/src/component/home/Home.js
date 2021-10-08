@@ -20,7 +20,7 @@ const Home = () => {
           <div className="home-cards d-flex">
             <a href='https://untappd.com/' rel="noreferrer" target="_blank">
               <div className="untappd-card">
-                <p>Go to Untappd for further Beer ratings and find like minded drinkers!</p>
+                <p>Go to Untappd for further beer ratings and find like minded drinkers!</p>
               </div>
             </a>
             <a href="https://www.beerhawk.co.uk/" rel="noreferrer" target="_blank">
